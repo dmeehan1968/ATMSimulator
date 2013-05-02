@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79B41A2D48A64DD98E989873 /* libPods-ATMSimulatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */; };
 		A3DC5E8917330E8100677077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8817330E8100677077 /* UIKit.framework */; };
 		A3DC5E8B17330E8100677077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8A17330E8100677077 /* Foundation.framework */; };
 		A3DC5E8D17330E8100677077 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8C17330E8100677077 /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ATMSimulatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DC5E8517330E8100677077 /* ATMSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DC5E8817330E8100677077 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3DC5E8A17330E8100677077 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +60,7 @@
 		A3DC5EB617330E8200677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3DC5EB817330E8200677077 /* ATMSimulatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMSimulatorTests.h; sourceTree = "<group>"; };
 		A3DC5EB917330E8200677077 /* ATMSimulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMSimulatorTests.m; sourceTree = "<group>"; };
+		C0756D5852784BBE92C67DE1 /* Pods-ATMSimulatorTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMSimulatorTests.xcconfig"; path = "Pods/Pods-ATMSimulatorTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 				A3DC5EAD17330E8200677077 /* SenTestingKit.framework in Frameworks */,
 				A3DC5EAE17330E8200677077 /* UIKit.framework in Frameworks */,
 				A3DC5EAF17330E8200677077 /* Foundation.framework in Frameworks */,
+				79B41A2D48A64DD98E989873 /* libPods-ATMSimulatorTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,7 @@
 				A3DC5EB217330E8200677077 /* ATMSimulatorTests */,
 				A3DC5E8717330E8100677077 /* Frameworks */,
 				A3DC5E8617330E8100677077 /* Products */,
+				C0756D5852784BBE92C67DE1 /* Pods-ATMSimulatorTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +115,7 @@
 				A3DC5E8A17330E8100677077 /* Foundation.framework */,
 				A3DC5E8C17330E8100677077 /* CoreGraphics.framework */,
 				A3DC5EAC17330E8200677077 /* SenTestingKit.framework */,
+				0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,10 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3DC5EC017330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulatorTests" */;
 			buildPhases = (
+				499F20053A8545468C7D6F13 /* Check Pods Manifest.lock */,
 				A3DC5EA617330E8200677077 /* Sources */,
 				A3DC5EA717330E8200677077 /* Frameworks */,
 				A3DC5EA817330E8200677077 /* Resources */,
 				A3DC5EA917330E8200677077 /* ShellScript */,
+				F6B7CF3316D240D08FD288DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,6 +259,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		499F20053A8545468C7D6F13 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
 		A3DC5EA917330E8200677077 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +285,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		F6B7CF3316D240D08FD288DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ATMSimulatorTests-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -405,12 +441,9 @@
 		};
 		A3DC5EC117330E8200677077 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0756D5852784BBE92C67DE1 /* Pods-ATMSimulatorTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ATMSimulator.app/ATMSimulator";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
 				INFOPLIST_FILE = "ATMSimulatorTests/ATMSimulatorTests-Info.plist";
@@ -422,12 +455,9 @@
 		};
 		A3DC5EC217330E8200677077 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0756D5852784BBE92C67DE1 /* Pods-ATMSimulatorTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ATMSimulator.app/ATMSimulator";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
 				INFOPLIST_FILE = "ATMSimulatorTests/ATMSimulatorTests-Info.plist";
@@ -456,6 +486,7 @@
 				A3DC5EBF17330E8200677077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3DC5EC017330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulatorTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +495,7 @@
 				A3DC5EC217330E8200677077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
