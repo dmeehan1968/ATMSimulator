@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3DC5E8917330E8100677077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8817330E8100677077 /* UIKit.framework */; };
+		A3DC5E8B17330E8100677077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8A17330E8100677077 /* Foundation.framework */; };
+		A3DC5E8D17330E8100677077 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8C17330E8100677077 /* CoreGraphics.framework */; };
+		A3DC5E9317330E8100677077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5E9117330E8100677077 /* InfoPlist.strings */; };
+		A3DC5E9517330E8100677077 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DC5E9417330E8100677077 /* main.m */; };
+		A3DC5E9917330E8200677077 /* ATMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DC5E9817330E8200677077 /* ATMAppDelegate.m */; };
+		A3DC5E9B17330E8200677077 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5E9A17330E8200677077 /* Default.png */; };
+		A3DC5E9D17330E8200677077 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5E9C17330E8200677077 /* Default@2x.png */; };
+		A3DC5E9F17330E8200677077 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5E9E17330E8200677077 /* Default-568h@2x.png */; };
+		A3DC5EA217330E8200677077 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5EA017330E8200677077 /* MainStoryboard.storyboard */; };
+		A3DC5EA517330E8200677077 /* ATMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DC5EA417330E8200677077 /* ATMViewController.m */; };
+		A3DC5EAD17330E8200677077 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5EAC17330E8200677077 /* SenTestingKit.framework */; };
+		A3DC5EAE17330E8200677077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8817330E8100677077 /* UIKit.framework */; };
+		A3DC5EAF17330E8200677077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8A17330E8100677077 /* Foundation.framework */; };
+		A3DC5EB717330E8200677077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5EB517330E8200677077 /* InfoPlist.strings */; };
+		A3DC5EBA17330E8200677077 /* ATMSimulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DC5EB917330E8200677077 /* ATMSimulatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3DC5EB017330E8200677077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3DC5E7D17330E8100677077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3DC5E8417330E8100677077;
+			remoteInfo = ATMSimulator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A3DC5E8517330E8100677077 /* ATMSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DC5E8817330E8100677077 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A3DC5E8A17330E8100677077 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3DC5E8C17330E8100677077 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A3DC5E9017330E8100677077 /* ATMSimulator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATMSimulator-Info.plist"; sourceTree = "<group>"; };
+		A3DC5E9217330E8100677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3DC5E9417330E8100677077 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3DC5E9617330E8200677077 /* ATMSimulator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ATMSimulator-Prefix.pch"; sourceTree = "<group>"; };
+		A3DC5E9717330E8200677077 /* ATMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMAppDelegate.h; sourceTree = "<group>"; };
+		A3DC5E9817330E8200677077 /* ATMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMAppDelegate.m; sourceTree = "<group>"; };
+		A3DC5E9A17330E8200677077 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A3DC5E9C17330E8200677077 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A3DC5E9E17330E8200677077 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A3DC5EA117330E8200677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A3DC5EA317330E8200677077 /* ATMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMViewController.h; sourceTree = "<group>"; };
+		A3DC5EA417330E8200677077 /* ATMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMViewController.m; sourceTree = "<group>"; };
+		A3DC5EAB17330E8200677077 /* ATMSimulatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATMSimulatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DC5EAC17330E8200677077 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A3DC5EB417330E8200677077 /* ATMSimulatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATMSimulatorTests-Info.plist"; sourceTree = "<group>"; };
+		A3DC5EB617330E8200677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3DC5EB817330E8200677077 /* ATMSimulatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMSimulatorTests.h; sourceTree = "<group>"; };
+		A3DC5EB917330E8200677077 /* ATMSimulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMSimulatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3DC5E8217330E8100677077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5E8917330E8100677077 /* UIKit.framework in Frameworks */,
+				A3DC5E8B17330E8100677077 /* Foundation.framework in Frameworks */,
+				A3DC5E8D17330E8100677077 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DC5EA717330E8200677077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5EAD17330E8200677077 /* SenTestingKit.framework in Frameworks */,
+				A3DC5EAE17330E8200677077 /* UIKit.framework in Frameworks */,
+				A3DC5EAF17330E8200677077 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3DC5E7C17330E8100677077 = {
+			isa = PBXGroup;
+			children = (
+				A3DC5E8E17330E8100677077 /* ATMSimulator */,
+				A3DC5EB217330E8200677077 /* ATMSimulatorTests */,
+				A3DC5E8717330E8100677077 /* Frameworks */,
+				A3DC5E8617330E8100677077 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3DC5E8617330E8100677077 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5E8517330E8100677077 /* ATMSimulator.app */,
+				A3DC5EAB17330E8200677077 /* ATMSimulatorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3DC5E8717330E8100677077 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5E8817330E8100677077 /* UIKit.framework */,
+				A3DC5E8A17330E8100677077 /* Foundation.framework */,
+				A3DC5E8C17330E8100677077 /* CoreGraphics.framework */,
+				A3DC5EAC17330E8200677077 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3DC5E8E17330E8100677077 /* ATMSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5E9717330E8200677077 /* ATMAppDelegate.h */,
+				A3DC5E9817330E8200677077 /* ATMAppDelegate.m */,
+				A3DC5EA017330E8200677077 /* MainStoryboard.storyboard */,
+				A3DC5EA317330E8200677077 /* ATMViewController.h */,
+				A3DC5EA417330E8200677077 /* ATMViewController.m */,
+				A3DC5E8F17330E8100677077 /* Supporting Files */,
+			);
+			path = ATMSimulator;
+			sourceTree = "<group>";
+		};
+		A3DC5E8F17330E8100677077 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5E9017330E8100677077 /* ATMSimulator-Info.plist */,
+				A3DC5E9117330E8100677077 /* InfoPlist.strings */,
+				A3DC5E9417330E8100677077 /* main.m */,
+				A3DC5E9617330E8200677077 /* ATMSimulator-Prefix.pch */,
+				A3DC5E9A17330E8200677077 /* Default.png */,
+				A3DC5E9C17330E8200677077 /* Default@2x.png */,
+				A3DC5E9E17330E8200677077 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3DC5EB217330E8200677077 /* ATMSimulatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5EB817330E8200677077 /* ATMSimulatorTests.h */,
+				A3DC5EB917330E8200677077 /* ATMSimulatorTests.m */,
+				A3DC5EB317330E8200677077 /* Supporting Files */,
+			);
+			path = ATMSimulatorTests;
+			sourceTree = "<group>";
+		};
+		A3DC5EB317330E8200677077 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5EB417330E8200677077 /* ATMSimulatorTests-Info.plist */,
+				A3DC5EB517330E8200677077 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3DC5E8417330E8100677077 /* ATMSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DC5EBD17330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulator" */;
+			buildPhases = (
+				A3DC5E8117330E8100677077 /* Sources */,
+				A3DC5E8217330E8100677077 /* Frameworks */,
+				A3DC5E8317330E8100677077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATMSimulator;
+			productName = ATMSimulator;
+			productReference = A3DC5E8517330E8100677077 /* ATMSimulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3DC5EAA17330E8200677077 /* ATMSimulatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DC5EC017330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulatorTests" */;
+			buildPhases = (
+				A3DC5EA617330E8200677077 /* Sources */,
+				A3DC5EA717330E8200677077 /* Frameworks */,
+				A3DC5EA817330E8200677077 /* Resources */,
+				A3DC5EA917330E8200677077 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3DC5EB117330E8200677077 /* PBXTargetDependency */,
+			);
+			name = ATMSimulatorTests;
+			productName = ATMSimulatorTests;
+			productReference = A3DC5EAB17330E8200677077 /* ATMSimulatorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3DC5E7D17330E8100677077 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ATM;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Dave Meehan";
+			};
+			buildConfigurationList = A3DC5E8017330E8100677077 /* Build configuration list for PBXProject "ATMSimulator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3DC5E7C17330E8100677077;
+			productRefGroup = A3DC5E8617330E8100677077 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3DC5E8417330E8100677077 /* ATMSimulator */,
+				A3DC5EAA17330E8200677077 /* ATMSimulatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3DC5E8317330E8100677077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5E9317330E8100677077 /* InfoPlist.strings in Resources */,
+				A3DC5E9B17330E8200677077 /* Default.png in Resources */,
+				A3DC5E9D17330E8200677077 /* Default@2x.png in Resources */,
+				A3DC5E9F17330E8200677077 /* Default-568h@2x.png in Resources */,
+				A3DC5EA217330E8200677077 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DC5EA817330E8200677077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5EB717330E8200677077 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3DC5EA917330E8200677077 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3DC5E8117330E8100677077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5E9517330E8100677077 /* main.m in Sources */,
+				A3DC5E9917330E8200677077 /* ATMAppDelegate.m in Sources */,
+				A3DC5EA517330E8200677077 /* ATMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DC5EA617330E8200677077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5EBA17330E8200677077 /* ATMSimulatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3DC5EB117330E8200677077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3DC5E8417330E8100677077 /* ATMSimulator */;
+			targetProxy = A3DC5EB017330E8200677077 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3DC5E9117330E8100677077 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DC5E9217330E8100677077 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A3DC5EA017330E8200677077 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DC5EA117330E8200677077 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		A3DC5EB517330E8200677077 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DC5EB617330E8200677077 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3DC5EBB17330E8200677077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A3DC5EBC17330E8200677077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3DC5EBE17330E8200677077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
+				INFOPLIST_FILE = "ATMSimulator/ATMSimulator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A3DC5EBF17330E8200677077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
+				INFOPLIST_FILE = "ATMSimulator/ATMSimulator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A3DC5EC117330E8200677077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ATMSimulator.app/ATMSimulator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
+				INFOPLIST_FILE = "ATMSimulatorTests/ATMSimulatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A3DC5EC217330E8200677077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ATMSimulator.app/ATMSimulator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
+				INFOPLIST_FILE = "ATMSimulatorTests/ATMSimulatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3DC5E8017330E8100677077 /* Build configuration list for PBXProject "ATMSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DC5EBB17330E8200677077 /* Debug */,
+				A3DC5EBC17330E8200677077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3DC5EBD17330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DC5EBE17330E8200677077 /* Debug */,
+				A3DC5EBF17330E8200677077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A3DC5EC017330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DC5EC117330E8200677077 /* Debug */,
+				A3DC5EC217330E8200677077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3DC5E7D17330E8100677077 /* Project object */;
+}
