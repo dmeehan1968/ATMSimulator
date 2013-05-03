@@ -41,6 +41,7 @@
 		0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ATMSimulatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AD1D2C1733C4CA002DB4A2 /* ATM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATM.h; sourceTree = "<group>"; };
 		A3AD1D2D1733C4CA002DB4A2 /* ATM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATM.m; sourceTree = "<group>"; };
+		A3AD1D2F1733C68B002DB4A2 /* ATMConsole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMConsole.h; sourceTree = "<group>"; };
 		A3DC5E8517330E8100677077 /* ATMSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DC5E8817330E8100677077 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3DC5E8A17330E8100677077 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +128,7 @@
 			children = (
 				A3AD1D2C1733C4CA002DB4A2 /* ATM.h */,
 				A3AD1D2D1733C4CA002DB4A2 /* ATM.m */,
+				A3AD1D2F1733C68B002DB4A2 /* ATMConsole.h */,
 				A3DC5E9717330E8200677077 /* ATMAppDelegate.h */,
 				A3DC5E9817330E8200677077 /* ATMAppDelegate.m */,
 				A3DC5EA017330E8200677077 /* MainStoryboard.storyboard */,
