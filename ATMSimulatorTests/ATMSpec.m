@@ -62,7 +62,7 @@ describe(@"ATM", ^{
            
             [[console should] receive:@selector(setMessage:) withArguments:@"Not Available"];
             
-            [sut powerOff];
+            [atm powerOff];
         });
         
     });
