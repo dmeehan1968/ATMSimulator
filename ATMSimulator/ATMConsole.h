@@ -1,6 +1,6 @@
 
 @protocol ATMConsole <NSObject>
 
-@property (strong, nonatomic, readonly) NSString *message;
+@property (strong, nonatomic) NSString *message;
 
 @end

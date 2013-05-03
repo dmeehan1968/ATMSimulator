@@ -10,9 +10,10 @@ describe(@"ATM", ^{
     
     beforeEach(^{
         
+        console = [KWMock mockForProtocol:@protocol(ATMConsole)];
+        [[console should] receive:@selector(setMessage:) withArguments:@"Not Available"];
         atm = [ATM new];
-        atm.console = console = [KWMock mockForProtocol:@protocol(ATMConsole)];
-        
+        atm.console = console;
     });
     
     afterEach(^{
