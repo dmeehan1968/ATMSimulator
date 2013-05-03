@@ -15,5 +15,6 @@
 @property (assign, nonatomic) CGFloat cashBalance;
 
 -(void)powerOn;
+-(void)powerOff;
 
 @end

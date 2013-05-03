@@ -23,6 +23,11 @@
     
 }
 
+-(void)powerOff {
+    
+    self.console.message = @"Not Available";
+}
+
 -(void)setCashBalance:(CGFloat)cashBalance {
     
     _cashBalance = cashBalance;
