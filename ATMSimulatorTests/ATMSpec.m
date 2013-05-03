@@ -35,6 +35,18 @@ describe(@"ATM", ^{
         [[[atm.console message] should] equal: @"Not Available"];
         
     });
+
+    context(@"Power on sequence", ^{
+        
+        it(@"should show 'enter initial cash balance' on console when powered on", ^{
+            
+            [[console should] receive:@selector(setMessage:) withArguments:@"Enter Initial Cash Balance"];
+            
+            [atm powerOn];
+            
+        });
+        
+    });
     
 });
 
