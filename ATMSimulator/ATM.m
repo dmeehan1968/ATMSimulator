@@ -9,6 +9,10 @@
 #import "ATM.h"
 
 @implementation ATM
+{
+	BOOL _inService;
+	CGFloat _cashBalance;
+}
 
 -(void)setConsole:(id<ATMConsole>)console {
     
@@ -17,15 +21,20 @@
     
 }
 
--(void)powerOn {
-    
-    self.console.message = @"Enter Initial Cash Balance";
-    
-}
+-(void)setInService:(BOOL)inService {
+	
+	_inService = inService;
+	
+	if (_inService) {
+		
+		self.console.message = @"Enter Initial Cash Balance";
 
--(void)powerOff {
-    
-    self.console.message = @"Not Available";
+	} else {
+		
+		self.console.message = @"Not Available";
+
+	}
+	
 }
 
 -(void)setCashBalance:(CGFloat)cashBalance {

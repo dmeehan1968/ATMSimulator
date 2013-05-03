@@ -28,7 +28,7 @@ describe(@"ATM", ^{
         
     });
     
-    it(@"should show 'not available' on console when powered off", ^{
+    it(@"should show 'not available' on console when not in service", ^{
        
         [[console should] receive:@selector(message) andReturn: @"Not Available"];
         
@@ -36,37 +36,41 @@ describe(@"ATM", ^{
         
     });
 
-    context(@"Power on sequence", ^{
+    context(@"Bring into service", ^{
         
-        it(@"should show 'enter initial cash balance' on console when powered on", ^{
+        it(@"should show 'enter initial cash balance'", ^{
             
             [[console should] receive:@selector(setMessage:) withArguments:@"Enter Initial Cash Balance"];
             
-            [atm powerOn];
-            
+			[atm setInService: YES];
+			
         });
         
-        it(@"should show 'please insert card' after receiving cash balance", ^{
+		context(@"after receiving cash balance", ^{
+			
+			it(@"should show 'please insert card' after receiving cash balance", ^{
+				
+				[[console should] receive:@selector(setMessage:) withArguments:@"Please Insert Card"];
+				
+				[atm setCashBalance: 1000.00];
+				
+			});
             
-            [[console should] receive:@selector(setMessage:) withArguments:@"Please Insert Card"];
-            
-            [atm setCashBalance: 1000.00];
-            
-        });
+		});
         
     });
     
-    context(@"Power off sequence", ^{
+	context(@"Taking out of service", ^{
        
-        it(@"should show 'not available' when powered off", ^{
+        it(@"should show 'not available'", ^{
            
             [[console should] receive:@selector(setMessage:) withArguments:@"Not Available"];
             
-            [atm powerOff];
+            [atm setInService: NO];
         });
         
     });
-    
+	
 });
 
 SPEC_END
