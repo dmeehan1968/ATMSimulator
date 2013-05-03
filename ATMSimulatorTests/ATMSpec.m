@@ -1,9 +1,31 @@
-//
-//  ATMSpec.m
-//  ATMSimulator
-//
-//  Created by Dave Meehan on 02/05/2013.
-//  Copyright (c) 2013 Dave Meehan. All rights reserved.
-//
+#import "kiwi.h"
+#import "ATM.h"
 
-#include <stdio.h>
+SPEC_BEGIN(ATMSpec)
+
+describe(@"ATM", ^{
+    
+    __block ATM *sut;
+    
+    beforeEach(^{
+        
+        sut = [ATM new];
+        
+    });
+    
+    afterEach(^{
+        
+        sut = nil;
+        
+    });
+    
+    it(@"should exist", ^{
+        
+        [sut shouldNotBeNil];
+        
+    });
+    
+    
+});
+
+SPEC_END

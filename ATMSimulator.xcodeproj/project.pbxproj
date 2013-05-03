@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		79B41A2D48A64DD98E989873 /* libPods-ATMSimulatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */; };
+		A3AD1D2E1733C4CA002DB4A2 /* ATM.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AD1D2D1733C4CA002DB4A2 /* ATM.m */; };
 		A3DC5E8917330E8100677077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8817330E8100677077 /* UIKit.framework */; };
 		A3DC5E8B17330E8100677077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8A17330E8100677077 /* Foundation.framework */; };
 		A3DC5E8D17330E8100677077 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8C17330E8100677077 /* CoreGraphics.framework */; };
@@ -23,7 +24,7 @@
 		A3DC5EAE17330E8200677077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8817330E8100677077 /* UIKit.framework */; };
 		A3DC5EAF17330E8200677077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8A17330E8100677077 /* Foundation.framework */; };
 		A3DC5EB717330E8200677077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5EB517330E8200677077 /* InfoPlist.strings */; };
-		A3DC5EBA17330E8200677077 /* ATMSimulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DC5EB917330E8200677077 /* ATMSimulatorTests.m */; };
+		A3DC5EC41733110000677077 /* ATMSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DC5EC31733110000677077 /* ATMSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ATMSimulatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3AD1D2C1733C4CA002DB4A2 /* ATM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATM.h; sourceTree = "<group>"; };
+		A3AD1D2D1733C4CA002DB4A2 /* ATM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATM.m; sourceTree = "<group>"; };
 		A3DC5E8517330E8100677077 /* ATMSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DC5E8817330E8100677077 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3DC5E8A17330E8100677077 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,8 +61,7 @@
 		A3DC5EAC17330E8200677077 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A3DC5EB417330E8200677077 /* ATMSimulatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATMSimulatorTests-Info.plist"; sourceTree = "<group>"; };
 		A3DC5EB617330E8200677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A3DC5EB817330E8200677077 /* ATMSimulatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMSimulatorTests.h; sourceTree = "<group>"; };
-		A3DC5EB917330E8200677077 /* ATMSimulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMSimulatorTests.m; sourceTree = "<group>"; };
+		A3DC5EC31733110000677077 /* ATMSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMSpec.m; sourceTree = "<group>"; };
 		C0756D5852784BBE92C67DE1 /* Pods-ATMSimulatorTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMSimulatorTests.xcconfig"; path = "Pods/Pods-ATMSimulatorTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,8 @@
 		A3DC5E8E17330E8100677077 /* ATMSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				A3AD1D2C1733C4CA002DB4A2 /* ATM.h */,
+				A3AD1D2D1733C4CA002DB4A2 /* ATM.m */,
 				A3DC5E9717330E8200677077 /* ATMAppDelegate.h */,
 				A3DC5E9817330E8200677077 /* ATMAppDelegate.m */,
 				A3DC5EA017330E8200677077 /* MainStoryboard.storyboard */,
@@ -150,9 +154,8 @@
 		A3DC5EB217330E8200677077 /* ATMSimulatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				A3DC5EB817330E8200677077 /* ATMSimulatorTests.h */,
-				A3DC5EB917330E8200677077 /* ATMSimulatorTests.m */,
 				A3DC5EB317330E8200677077 /* Supporting Files */,
+				A3DC5EC31733110000677077 /* ATMSpec.m */,
 			);
 			path = ATMSimulatorTests;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				A3DC5E9517330E8100677077 /* main.m in Sources */,
 				A3DC5E9917330E8200677077 /* ATMAppDelegate.m in Sources */,
 				A3DC5EA517330E8200677077 /* ATMViewController.m in Sources */,
+				A3AD1D2E1733C4CA002DB4A2 /* ATM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3DC5EBA17330E8200677077 /* ATMSimulatorTests.m in Sources */,
+				A3DC5EC41733110000677077 /* ATMSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
