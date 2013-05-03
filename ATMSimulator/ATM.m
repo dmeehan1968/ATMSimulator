@@ -17,4 +17,10 @@
     
 }
 
+-(void)powerOn {
+    
+    self.console.message = @"Enter Initial Cash Balance";
+    
+}
+
 @end

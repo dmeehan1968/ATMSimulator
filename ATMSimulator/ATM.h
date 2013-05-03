@@ -13,4 +13,6 @@
 
 @property (weak, nonatomic) id<ATMConsole> console;
 
+-(void)powerOn;
+
 @end
