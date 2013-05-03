@@ -8,7 +8,7 @@ describe(@"ATM", ^{
     __block ATM *atm;
     __block id console;
     
-    beforeEach(^{
+    beforeAll(^{
         
         console = [KWMock mockForProtocol:@protocol(ATMConsole)];
         [[console should] receive:@selector(setMessage:) withArguments:@"Not Available"];
@@ -16,7 +16,7 @@ describe(@"ATM", ^{
         atm.console = console;
     });
     
-    afterEach(^{
+    afterAll(^{
         
         atm = nil;
         
@@ -45,6 +45,15 @@ describe(@"ATM", ^{
             [atm powerOn];
             
         });
+        
+        it(@"should show 'please insert card' after receiving cash balance", ^{
+            
+            [[console should] receive:@selector(setMessage:) withArguments:@"Please Insert Card"];
+            
+            [atm setCashBalance: 1000.00];
+            
+        });
+        
         
     });
     
