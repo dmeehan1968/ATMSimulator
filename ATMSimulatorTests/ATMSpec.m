@@ -54,6 +54,16 @@ describe(@"ATM", ^{
             
         });
         
+    });
+    
+    context(@"Power off sequence", ^{
+       
+        it(@"should show 'not available' when powered off", ^{
+           
+            [[console should] receive:@selector(setMessage:) withArguments:@"Not Available"];
+            
+            [sut powerOff];
+        });
         
     });
     
