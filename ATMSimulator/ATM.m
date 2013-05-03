@@ -23,4 +23,11 @@
     
 }
 
+-(void)setCashBalance:(CGFloat)cashBalance {
+    
+    _cashBalance = cashBalance;
+    
+    self.console.message = @"Please Insert Card";
+    
+}
 @end

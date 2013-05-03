@@ -12,6 +12,7 @@
 @interface ATM : NSObject
 
 @property (weak, nonatomic) id<ATMConsole> console;
+@property (assign, nonatomic) CGFloat cashBalance;
 
 -(void)powerOn;
 
