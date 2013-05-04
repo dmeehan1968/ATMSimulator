@@ -30,7 +30,18 @@ describe(@"ATMOperatorSwitch", ^{
 		
 	});
 
-	
+	it(@"should notify delegate when state changes", ^{
+		
+		id delegate = [KWMock mockForProtocol:@protocol(ATMOperatorSwitchDelegate)];
+		
+		[[delegate should] receive:@selector(operatorSwitch:didChangeToState:) withArguments:sut, theValue(YES)];
+		
+		sut.delegate = delegate;
+		
+		sut.state = YES;
+		
+	});
+
     
 });
 
