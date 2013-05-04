@@ -23,6 +23,7 @@
 
 	[self setupAtmController];
 	[self setupOperatorSwitch];
+	[self setupConsole];
 	
 }
 
@@ -47,6 +48,14 @@
 - (IBAction)didChangeValueForOperatorSwitchUI:(id)sender {
 
 	self.operatorSwitch.state = ((UISwitch *)sender).isOn;
+	
+}
+
+#pragma mark - Console
+
+-(void)setupConsole {
+	
+	self.console = [ATMConsole new];
 	
 }
 

@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ATMController.h"
+#import "ATMConsole.h"
 
 @interface ATMViewController : UIViewController
 
 @property (strong, nonatomic) ATMController *atmController;
 @property (strong, nonatomic) ATMOperatorSwitch *operatorSwitch;
+@property (strong, nonatomic) ATMConsole *console;
+
 @property (strong, nonatomic) IBOutlet UISwitch *operatorSwitchUI;
 - (IBAction)didChangeValueForOperatorSwitchUI:(id)sender;
 
