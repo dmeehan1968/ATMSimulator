@@ -7,6 +7,7 @@ describe(@"ATM Controller", ^{
 	
     __block ATMController *sut;
     __block id console;
+	__block id operatorSwitch;
 	
     beforeAll(^{
 		
@@ -54,6 +55,17 @@ describe(@"ATM Controller", ^{
 			[(id)sut.operatorSwitch shouldBeNil];
 			
 		});
+		
+		it(@"can assign an operator switch", ^{
+			
+			operatorSwitch = [KWMock mockForProtocol:@protocol(ATMOperatorSwitch)];
+			
+			sut.operatorSwitch = operatorSwitch;
+			
+			[[(id)sut.operatorSwitch should] equal:operatorSwitch];
+			
+		});
+
 
 		
 	});
