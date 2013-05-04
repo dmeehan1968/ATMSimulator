@@ -6,7 +6,8 @@ SPEC_BEGIN(ATMControllerSpec)
 describe(@"ATM Controller", ^{
 	
     __block ATMController *sut;
-    
+    __block id console;
+	
     beforeAll(^{
 		
         sut = [[ATMController alloc] init];
@@ -31,6 +32,17 @@ describe(@"ATM Controller", ^{
 			[(id)sut.console shouldBeNil];
 			
 		});
+		
+		it(@"can have a console assigned", ^{
+			
+			console = [KWMock mockForProtocol:@protocol(ATMConsole)];
+			
+			sut.console = console;
+			
+			[[(id)sut.console should] equal:console];
+			
+		});
+
 		
 	});
 
