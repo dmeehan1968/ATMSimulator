@@ -28,7 +28,7 @@ describe(@"ATM Controller", ^{
 		
 		it(@"should not have a console at startup", ^{
 			
-			[sut.console shouldBeNil];
+			[(id)sut.console shouldBeNil];
 			
 		});
 		

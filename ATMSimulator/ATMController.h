@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ATMConsole.h"
 
 @interface ATMController : NSObject
+
+@property (weak) id<ATMConsole> console;
 
 @end
