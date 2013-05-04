@@ -30,15 +30,19 @@ describe(@"ATMViewController", ^{
 		
 	});
 
-	it(@"should have an instance of an operator switch", ^{
+	context(@"operator switch", ^{
 		
-		[sut.operatorSwitch shouldNotBeNil];
+		it(@"should have an instance of an operator switch", ^{
+			
+			[sut.operatorSwitch shouldNotBeNil];
+			
+		});
 		
-	});
-
-	it(@"should have operator switch assigned to ATM controller", ^{
-		
-		[[(id)sut.atmController.operatorSwitch should] equal: sut.operatorSwitch];
+		it(@"should have operator switch assigned to ATM controller", ^{
+			
+			[[(id)sut.atmController.operatorSwitch should] equal: sut.operatorSwitch];
+			
+		});
 		
 	});
 
