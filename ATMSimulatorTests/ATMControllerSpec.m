@@ -68,9 +68,9 @@ describe(@"ATM Controller", ^{
 			
 		});
 
-		it(@"should assign atm controller as operator switch delegate", ^{
+		it(@"atm should respond to switch notification", ^{
 			
-			[[(id)sut.operatorSwitch.delegate should] equal: sut];
+			[[sut should] respondToSelector:@selector(operatorSwitch:didChangeToState:)];
 			
 		});
 
