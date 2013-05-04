@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ATMController.h"
 
 @interface ATMViewController : UIViewController
+
+@property (strong, nonatomic) ATMController *atmController;
 
 @end

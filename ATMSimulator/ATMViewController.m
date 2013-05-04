@@ -16,4 +16,10 @@
 
 @implementation ATMViewController
 
+-(void)viewDidLoad {
+
+	self.atmController = [ATMController new];	
+	
+}
+
 @end
