@@ -15,14 +15,33 @@
 @end
 
 @implementation ATMViewController
+{}
+
+#pragma mark - Lifecycle
 
 -(void)viewDidLoad {
 
-	self.atmController = [ATMController new];	
+	[self setupAtmController];
+	[self setupOperatorSwitch];
+	
+}
+
+#pragma mark - ATM Controller
+
+-(void)setupAtmController {
+	
+	self.atmController = [ATMController new];
+	
+}
+
+#pragma mark - Operator Switch
+
+-(void)setupOperatorSwitch {
+	
 	self.operatorSwitch = [ATMOperatorSwitch new];
 	self.atmController.operatorSwitch = self.operatorSwitch;
 	self.operatorSwitchUI.on = self.operatorSwitch.state;
-	
+
 }
 
 - (IBAction)didChangeValueForOperatorSwitchUI:(id)sender {
