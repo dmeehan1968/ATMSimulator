@@ -77,8 +77,16 @@ describe(@"ATMViewController", ^{
 			
 			[sut didChangeValueForOperatorSwitchUI:mockSwitch];
 		});
+		
+	});
 
-
+	context(@"Console", ^{
+		
+		it(@"should have an instance of a console", ^{
+			
+			[sut.console shouldNotBeNil];
+			
+		});
 
 		
 	});
