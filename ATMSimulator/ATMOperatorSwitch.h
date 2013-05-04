@@ -1,0 +1,5 @@
+
+@protocol ATMOperatorSwitch <NSObject>
+
+
+@end

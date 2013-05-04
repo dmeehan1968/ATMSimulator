@@ -51,7 +51,7 @@ describe(@"ATM Controller", ^{
 		
 		it(@"should not have a keyswitch on startup", ^{
 			
-			[sut.operatorSwitch shouldBeNil];
+			[(id)sut.operatorSwitch shouldBeNil];
 			
 		});
 

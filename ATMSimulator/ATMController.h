@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ATMConsole.h"
+#import "ATMOperatorSwitch.h"
 
 @interface ATMController : NSObject
 
 @property (weak, nonatomic) id<ATMConsole> console;
+@property (weak, nonatomic) id<ATMOperatorSwitch> operatorSwitch;
 
 @end
