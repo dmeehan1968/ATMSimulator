@@ -52,6 +52,12 @@ describe(@"ATMViewController", ^{
 			[sut.operatorSwitchUI shouldNotBeNil];
 			
 		});
+		
+		it(@"should have matching state for operator switch and UI switch", ^{
+			
+			[[theValue(sut.operatorSwitch.state) should] equal: theValue(sut.operatorSwitchUI.isOn)];
+			
+		});
 
 		it(@"should have an IBAction for changes to UISwitch", ^{
 			
