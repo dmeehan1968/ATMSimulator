@@ -12,5 +12,6 @@
 @interface ATMViewController : UIViewController
 
 @property (strong, nonatomic) ATMController *atmController;
+@property (strong, nonatomic) ATMOperatorSwitch *operatorSwitch;
 
 @end

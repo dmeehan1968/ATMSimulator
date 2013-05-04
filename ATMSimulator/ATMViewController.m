@@ -19,6 +19,7 @@
 -(void)viewDidLoad {
 
 	self.atmController = [ATMController new];	
+	self.operatorSwitch = [ATMOperatorSwitch new];
 	
 }
 
