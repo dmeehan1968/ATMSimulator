@@ -36,6 +36,12 @@ describe(@"ATMViewController", ^{
 		
 	});
 
+	it(@"should have operator switch assigned to ATM controller", ^{
+		
+		[[(id)sut.atmController.operatorSwitch should] equal: sut.operatorSwitch];
+		
+	});
+
     
 });
 
