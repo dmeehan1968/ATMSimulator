@@ -7,13 +7,13 @@ describe(@"ATM Controller", ^{
 	
     __block ATMController *sut;
     
-    beforeEach(^{
+    beforeAll(^{
 		
         sut = [[ATMController alloc] init];
         
     });
     
-    afterEach(^{
+    afterAll(^{
         
         sut = nil;
     });
@@ -23,6 +23,18 @@ describe(@"ATM Controller", ^{
         [sut shouldNotBeNil];
         
     });
+	
+	context(@"Console", ^{
+		
+		it(@"should not have a console at startup", ^{
+			
+			[sut.console shouldBeNil];
+			
+		});
+		
+	});
+
+	
     
 });
 
