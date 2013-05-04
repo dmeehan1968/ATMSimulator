@@ -33,9 +33,11 @@ describe(@"ATM Controller", ^{
 			
 		});
 		
-		it(@"can have a console assigned", ^{
+		it(@"sets 'not available' on startup", ^{
 			
 			console = [KWMock mockForProtocol:@protocol(ATMConsole)];
+			
+			[[console should] receive:@selector(setMessage:) withArguments:@"Not Available"];
 			
 			sut.console = console;
 			
