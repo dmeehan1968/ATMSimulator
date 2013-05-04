@@ -30,6 +30,12 @@ describe(@"ATMViewController", ^{
 		
 	});
 
+	it(@"should have an instance of an operator switch", ^{
+		
+		[sut.operatorSwitch shouldNotBeNil];
+		
+	});
+
     
 });
 
