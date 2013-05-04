@@ -12,3 +12,9 @@
 @property (weak, nonatomic) id<ATMOperatorSwitchDelegate> delegate;
 
 @end
+
+@interface ATMOperatorSwitch : NSObject <ATMOperatorSwitch>
+
+@property (weak, nonatomic) id<ATMOperatorSwitchDelegate> delegate;
+
+@end
