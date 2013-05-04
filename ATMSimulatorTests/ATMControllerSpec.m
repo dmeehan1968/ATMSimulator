@@ -56,9 +56,11 @@ describe(@"ATM Controller", ^{
 			
 		});
 		
-		it(@"can assign an operator switch", ^{
+		it(@"should assign atm controller as operator switch delegate", ^{
 			
 			operatorSwitch = [KWMock mockForProtocol:@protocol(ATMOperatorSwitch)];
+			
+			[[operatorSwitch should] receive:@selector(setDelegate:) withArguments:sut];
 			
 			sut.operatorSwitch = operatorSwitch;
 			

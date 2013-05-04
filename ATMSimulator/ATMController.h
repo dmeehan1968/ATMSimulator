@@ -10,7 +10,7 @@
 #import "ATMConsole.h"
 #import "ATMOperatorSwitch.h"
 
-@interface ATMController : NSObject
+@interface ATMController : NSObject <ATMOperatorSwitchDelegate>
 
 @property (weak, nonatomic) id<ATMConsole> console;
 @property (weak, nonatomic) id<ATMOperatorSwitch> operatorSwitch;

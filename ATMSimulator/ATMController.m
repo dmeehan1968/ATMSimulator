@@ -17,4 +17,11 @@
 	[_console setMessage:@"Not Available"];
 	
 }
+
+-(void)setOperatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch {
+	_operatorSwitch = operatorSwitch;
+	
+	_operatorSwitch.delegate = self;
+	
+}
 @end
