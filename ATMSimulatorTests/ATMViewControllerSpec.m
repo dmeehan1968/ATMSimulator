@@ -60,6 +60,19 @@ describe(@"ATMViewController", ^{
 			[[[sut.operatorSwitchUI actionsForTarget:sut forControlEvent:UIControlEventValueChanged] should] contain:@"didChangeValueForOperatorSwitchUI:"];
 			
 		});
+		
+		it(@"should change state of operator switch to YES", ^{
+			
+			id mockSwitch = [KWMock mockForClass:[UISwitch class]];
+			
+			[[mockSwitch should] receive:@selector(isOn) andReturn:theValue(YES)];
+			
+			[[sut.operatorSwitch should] receive:@selector(setState:) withArguments:theValue(YES)];
+			
+			[sut didChangeValueForOperatorSwitchUI:mockSwitch];
+		});
+
+
 
 		
 	});
