@@ -73,6 +73,15 @@ describe(@"ATM Controller", ^{
 			[[sut should] respondToSelector:@selector(operatorSwitch:didChangeToState:)];
 			
 		});
+		
+		it(@"should ask for initial balance when operator switch turned on", ^{
+			
+			[[(id)sut.console should] receive:@selector(setMessage:) withArguments:@"Please Enter Initial Cash Balance"];
+			
+			[sut operatorSwitch: operatorSwitch didChangeToState:YES];
+			
+		});
+
 
 		
 	});
