@@ -9,7 +9,10 @@ describe(@"ATMViewController", ^{
     
     beforeEach(^{
 		
-        sut = [[ATMViewController alloc] init];
+		UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+		
+        sut = [storyboard instantiateViewControllerWithIdentifier:@"ATMUserInterface"];
+		
         [sut view];
     });
     

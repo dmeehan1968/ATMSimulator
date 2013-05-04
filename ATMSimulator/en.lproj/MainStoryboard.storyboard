@@ -7,12 +7,22 @@
         <!--View Controller-->
         <scene sceneID="4">
             <objects>
-                <viewController id="2" customClass="ATMViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ATMUserInterface" id="2" customClass="ATMViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0E7-h0-u2E"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0E7-h0-u2E" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="LMd-oC-XMm"/>
+                            <constraint firstAttribute="trailing" secondItem="0E7-h0-u2E" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MTg-ij-nsH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="operatorSwitchUI" destination="0E7-h0-u2E" id="xfj-oi-gkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
