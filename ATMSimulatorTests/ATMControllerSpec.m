@@ -66,6 +66,11 @@ describe(@"ATM Controller", ^{
 			
 		});
 
+		it(@"should assign atm controller as operator switch delegate", ^{
+			
+			[[(id)sut.operatorSwitch.delegate should] equal: sut];
+			
+		});
 
 		
 	});
