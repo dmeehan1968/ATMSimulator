@@ -23,6 +23,14 @@ describe(@"ATMOperatorSwitch", ^{
         [sut shouldNotBeNil];
         
     });
+	
+	it(@"should have a state (on/off) which should be off by default", ^{
+		
+		[[theValue(sut.state) should] beNo];
+		
+	});
+
+	
     
 });
 
