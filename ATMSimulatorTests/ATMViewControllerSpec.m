@@ -44,6 +44,13 @@ describe(@"ATMViewController", ^{
 			
 		});
 		
+		it(@"should have UISwitch outlet to represent the operator switch", ^{
+			
+			[sut.operatorSwitchUI shouldNotBeNil];
+			
+		});
+
+		
 	});
 
     
