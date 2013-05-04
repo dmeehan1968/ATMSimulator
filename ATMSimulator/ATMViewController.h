@@ -14,5 +14,6 @@
 @property (strong, nonatomic) ATMController *atmController;
 @property (strong, nonatomic) ATMOperatorSwitch *operatorSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *operatorSwitchUI;
+- (IBAction)didChangeValueForOperatorSwitchUI:(id)sender;
 
 @end

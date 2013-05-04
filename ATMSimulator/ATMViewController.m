@@ -21,6 +21,10 @@
 	self.atmController = [ATMController new];	
 	self.operatorSwitch = [ATMOperatorSwitch new];
 	self.atmController.operatorSwitch = self.operatorSwitch;
+
+- (IBAction)didChangeValueForOperatorSwitchUI:(id)sender {
+
+	self.operatorSwitch.state = ((UISwitch *)sender).isOn;
 	
 }
 
