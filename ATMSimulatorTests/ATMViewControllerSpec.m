@@ -10,7 +10,7 @@ describe(@"ATMViewController", ^{
     beforeEach(^{
 		
         sut = [[ATMViewController alloc] init];
-        
+        [sut view];
     });
     
     afterEach(^{
@@ -23,6 +23,13 @@ describe(@"ATMViewController", ^{
         [sut shouldNotBeNil];
         
     });
+	
+	it(@"should have an instance of an ATM controller", ^{
+		
+		[sut.atmController shouldNotBeNil];
+		
+	});
+
     
 });
 
