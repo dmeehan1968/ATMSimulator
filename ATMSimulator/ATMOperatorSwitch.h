@@ -1,6 +1,9 @@
 
+@protocol ATMOperatorSwitch;
+
 @protocol ATMOperatorSwitchDelegate <NSObject>
 
+-(void) operatorSwitch: (id<ATMOperatorSwitch>) operatorSwitch didChangeToState: (BOOL) state;
 
 @end
 

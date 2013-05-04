@@ -24,4 +24,9 @@
 	_operatorSwitch.delegate = self;
 	
 }
+
+-(void)operatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch didChangeToState:(BOOL)state {
+	
+}
+
 @end
