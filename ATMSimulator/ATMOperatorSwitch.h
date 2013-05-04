@@ -16,7 +16,4 @@
 
 @interface ATMOperatorSwitch : NSObject <ATMOperatorSwitch>
 
-@property (weak, nonatomic) id<ATMOperatorSwitchDelegate> delegate;
-@property (assign, nonatomic) BOOL state;
-
 @end
