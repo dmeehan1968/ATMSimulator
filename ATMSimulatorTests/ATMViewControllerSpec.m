@@ -53,6 +53,14 @@ describe(@"ATMViewController", ^{
 			
 		});
 
+		it(@"should have an IBAction for changes to UISwitch", ^{
+			
+			[[sut should] respondToSelector:@selector(didChangeValueForOperatorSwitchUI:)];
+			
+			[[[sut.operatorSwitchUI actionsForTarget:sut forControlEvent:UIControlEventValueChanged] should] contain:@"didChangeValueForOperatorSwitchUI:"];
+			
+		});
+
 		
 	});
 
