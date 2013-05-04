@@ -74,6 +74,10 @@ describe(@"ATM Controller", ^{
 			
 		});
 		
+	});
+
+	context(@"Bringing into Service", ^{
+		
 		it(@"should ask for initial balance when operator switch turned on", ^{
 			
 			[[(id)sut.console should] receive:@selector(setMessage:) withArguments:@"Please Enter Initial Cash Balance"];
@@ -82,11 +86,14 @@ describe(@"ATM Controller", ^{
 			
 		});
 
+		xit(@"accept input of cash balance", ^{
+			
+			// TODO
+			
+		});
 
-		
 	});
 
-	
     
 });
 
