@@ -45,6 +45,16 @@ describe(@"ATM Controller", ^{
 			
 		});
 
+	});
+
+	context(@"Operator Switch", ^{
+		
+		it(@"should not have a keyswitch on startup", ^{
+			
+			[sut.operatorSwitch shouldBeNil];
+			
+		});
+
 		
 	});
 
