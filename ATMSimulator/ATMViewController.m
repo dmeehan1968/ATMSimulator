@@ -20,6 +20,7 @@
 
 	self.atmController = [ATMController new];	
 	self.operatorSwitch = [ATMOperatorSwitch new];
+	self.atmController.operatorSwitch = self.operatorSwitch;
 	
 }
 
