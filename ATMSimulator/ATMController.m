@@ -10,4 +10,11 @@
 
 @implementation ATMController
 
+-(void)setConsole:(id<ATMConsole>)console {
+	
+	_console = console;
+	
+	[_console setMessage:@"Not Available"];
+	
+}
 @end

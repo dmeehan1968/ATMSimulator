@@ -11,6 +11,6 @@
 
 @interface ATMController : NSObject
 
-@property (weak) id<ATMConsole> console;
+@property (weak, nonatomic) id<ATMConsole> console;
 
 @end
