@@ -27,6 +27,9 @@
 
 -(void)operatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch didChangeToState:(BOOL)state {
 	
+	if (state) {
+		[self.console setMessage:@"Please Enter Initial Cash Balance"];
+	}
 }
 
 @end
