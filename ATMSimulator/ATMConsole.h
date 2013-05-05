@@ -1,5 +1,9 @@
 
+@class ATMConsole;
+
 @protocol ATMConsoleDelegate <NSObject>
+
+-(void) console: (ATMConsole *) console didChangeMessage: (NSString *) message;
 
 @end
 
