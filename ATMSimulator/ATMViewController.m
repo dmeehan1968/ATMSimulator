@@ -55,8 +55,7 @@
 
 -(void)setupConsole {
 	
-	self.console = [ATMConsole new];
-	self.console.delegate = self;
+	self.console = [[ATMConsole alloc] initWithDelegate:self];
 	self.atmController.console = self.console;
 	
 }

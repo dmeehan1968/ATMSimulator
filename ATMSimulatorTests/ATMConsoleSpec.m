@@ -32,15 +32,6 @@ describe(@"ATMConsole", ^{
 		
 	});
 
-	
-	it(@"should be able to assign a message", ^{
-		
-		NSString *expectedResult = @"This is a test";
-		sut.message = expectedResult;
-		
-		[[sut.message should] equal: expectedResult];
-	});
-	
 	it(@"should notify delegate when message changes", ^{
 
 		NSString *expectedResult = @"Test Message";

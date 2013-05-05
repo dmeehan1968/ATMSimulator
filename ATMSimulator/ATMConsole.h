@@ -10,10 +10,12 @@
 @protocol ATMConsole <NSObject>
 
 @property (strong, nonatomic) NSString *message;
-@property (weak) id<ATMConsoleDelegate> delegate;
+@property (weak, readonly) id<ATMConsoleDelegate> delegate;
 
 @end
 
 @interface ATMConsole : NSObject <ATMConsole>
+
+-(id) initWithDelegate: (id<ATMConsoleDelegate>) delegate;
 
 @end
