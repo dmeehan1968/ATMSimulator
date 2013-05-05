@@ -48,6 +48,18 @@ describe(@"ATMConsole", ^{
 		
 	});
 
+	it(@"should notify delegate when message changes", ^{
+
+		NSString *expectedResult = @"Test Message";
+		
+		sut.delegate = delegate;
+		
+		[[delegate should] receive:@selector(console:didChangeMessage:) withArguments:sut,expectedResult];
+		
+		sut.message = expectedResult;
+		
+	});
+
 	
 
     
