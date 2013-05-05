@@ -63,6 +63,7 @@
 
 -(void)console:(ATMConsole *)console didChangeMessage:(NSString *)message {
 	
+	self.messageUI.text = message;
 	
 }
 
