@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		79B41A2D48A64DD98E989873 /* libPods-ATMSimulatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */; };
+		A3029420173713B800D8C9A4 /* ATMBindingManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A302941F173713B800D8C9A4 /* ATMBindingManagerSpec.m */; };
 		A34EFE781735BB4A00A86A67 /* ATMConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A34EFE771735BB4A00A86A67 /* ATMConsole.m */; };
 		A39F85D21735568200234A55 /* ATMControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A39F85D11735568200234A55 /* ATMControllerSpec.m */; };
 		A39F85D5173556CB00234A55 /* ATMController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39F85D4173556CB00234A55 /* ATMController.m */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ATMSimulatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A302941F173713B800D8C9A4 /* ATMBindingManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMBindingManagerSpec.m; sourceTree = "<group>"; };
 		A34EFE771735BB4A00A86A67 /* ATMConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMConsole.m; sourceTree = "<group>"; };
 		A39F85D11735568200234A55 /* ATMControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMControllerSpec.m; sourceTree = "<group>"; };
 		A39F85D3173556CB00234A55 /* ATMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMController.h; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		A3DC5EB217330E8200677077 /* ATMSimulatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				A302941F173713B800D8C9A4 /* ATMBindingManagerSpec.m */,
 				A3EA54631736BFF40008D2DF /* ATMConsoleSpec.m */,
 				A39F85D11735568200234A55 /* ATMControllerSpec.m */,
 				A3EB786B173571D00061BE26 /* ATMOperatorSwitchSpec.m */,
@@ -346,6 +349,7 @@
 				A3EB786A17356F920061BE26 /* ATMViewControllerSpec.m in Sources */,
 				A3EB786C173571D00061BE26 /* ATMOperatorSwitchSpec.m in Sources */,
 				A3EA54641736BFF40008D2DF /* ATMConsoleSpec.m in Sources */,
+				A3029420173713B800D8C9A4 /* ATMBindingManagerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
