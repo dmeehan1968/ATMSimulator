@@ -38,6 +38,16 @@ describe(@"ATMConsole", ^{
 		
 	});
 
+	it(@"can assign a delegate that confirms to ATMConsoleDelegate", ^{
+		
+		id delegate = [KWMock mockForProtocol:@protocol(ATMConsoleDelegate)];
+		
+		sut.delegate = delegate;
+		
+		[[(id)sut.delegate should] equal: delegate];
+		
+	});
+
 
     
 });
