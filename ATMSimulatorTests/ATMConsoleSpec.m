@@ -6,11 +6,13 @@ SPEC_BEGIN(ATMConsoleSpec)
 describe(@"ATMConsole", ^{
 	
     __block ATMConsole *sut;
-    
+	__block id delegate;
+	
     beforeEach(^{
 		
         sut = [[ATMConsole alloc] init];
-        
+		delegate = [KWMock mockForProtocol:@protocol(ATMConsoleDelegate)];
+		
     });
     
     afterEach(^{
@@ -38,9 +40,7 @@ describe(@"ATMConsole", ^{
 		
 	});
 
-	it(@"can assign a delegate that confirms to ATMConsoleDelegate", ^{
-		
-		id delegate = [KWMock mockForProtocol:@protocol(ATMConsoleDelegate)];
+	it(@"can assign a delegate that conforms to ATMConsoleDelegate", ^{
 		
 		sut.delegate = delegate;
 		
@@ -48,6 +48,7 @@ describe(@"ATMConsole", ^{
 		
 	});
 
+	
 
     
 });
