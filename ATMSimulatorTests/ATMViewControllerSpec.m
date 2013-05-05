@@ -94,7 +94,7 @@ describe(@"ATMViewController", ^{
 			
 		});
 		
-		it(@"consoles delegate should be view controller", ^{
+		it(@"should assign view controller as consoles delegate", ^{
 			
 			[[(id)sut.console.delegate should] equal:sut];
 			
