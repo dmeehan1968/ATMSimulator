@@ -111,7 +111,7 @@ describe(@"ATMViewController", ^{
 			[sut.messageUI shouldNotBeNil];
 			
 		});
-
+		
 		it(@"should update message UI when message changes", ^{
 			
 			NSString *expectedResult = @"Test Message";
@@ -122,6 +122,12 @@ describe(@"ATMViewController", ^{
 			
 		});
 
+		it(@"should have initial message in UI that matches console message", ^{
+			
+			[[sut.messageUI.text should] equal:sut.console.message];
+			
+		});
+		
 
 		
 	});
