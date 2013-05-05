@@ -93,6 +93,13 @@ describe(@"ATMViewController", ^{
 			[[(id)sut.atmController.console should] equal:sut.console];
 			
 		});
+		
+		it(@"consoles delegate should be view controller", ^{
+			
+			[[(id)sut.console.delegate should] equal:sut];
+			
+		});
+
 
 		
 	});
