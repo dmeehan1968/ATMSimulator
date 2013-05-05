@@ -54,9 +54,10 @@ describe(@"ATMBindingManager", ^{
 		
 	});
 
-	xit(@"should create a one-way binding, setting objectB.bStringValue should update objectA.aStringValue", ^{
+	it(@"should create a one-way binding, setting objectB.bStringValue should update objectA.aStringValue", ^{
 		
-		NSString *expectedResult = @"Test Value";
+		NSString *expectedResult = @"New Value";
+		objectA.aStringValue = @"Original Value";
 		
 		[sut bind: objectA keypath: @"aStringValue" subject: objectB keypath: @"bStringValue"];
 		
