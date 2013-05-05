@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		79B41A2D48A64DD98E989873 /* libPods-ATMSimulatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */; };
 		A3029420173713B800D8C9A4 /* ATMBindingManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A302941F173713B800D8C9A4 /* ATMBindingManagerSpec.m */; };
+		A30294231737147300D8C9A4 /* ATMBindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A30294221737147300D8C9A4 /* ATMBindingManager.m */; };
 		A34EFE781735BB4A00A86A67 /* ATMConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A34EFE771735BB4A00A86A67 /* ATMConsole.m */; };
 		A39F85D21735568200234A55 /* ATMControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A39F85D11735568200234A55 /* ATMControllerSpec.m */; };
 		A39F85D5173556CB00234A55 /* ATMController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39F85D4173556CB00234A55 /* ATMController.m */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ATMSimulatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A302941F173713B800D8C9A4 /* ATMBindingManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMBindingManagerSpec.m; sourceTree = "<group>"; };
+		A30294211737147300D8C9A4 /* ATMBindingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMBindingManager.h; sourceTree = "<group>"; };
+		A30294221737147300D8C9A4 /* ATMBindingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMBindingManager.m; sourceTree = "<group>"; };
 		A34EFE771735BB4A00A86A67 /* ATMConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMConsole.m; sourceTree = "<group>"; };
 		A39F85D11735568200234A55 /* ATMControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMControllerSpec.m; sourceTree = "<group>"; };
 		A39F85D3173556CB00234A55 /* ATMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMController.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 		A3DC5E8E17330E8100677077 /* ATMSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				A30294211737147300D8C9A4 /* ATMBindingManager.h */,
+				A30294221737147300D8C9A4 /* ATMBindingManager.m */,
 				A39F85D3173556CB00234A55 /* ATMController.h */,
 				A39F85D4173556CB00234A55 /* ATMController.m */,
 				A3AD1D2F1733C68B002DB4A2 /* ATMConsole.h */,
@@ -338,6 +343,7 @@
 				A39F85D5173556CB00234A55 /* ATMController.m in Sources */,
 				A3EB786E1735722C0061BE26 /* ATMOperatorSwitch.m in Sources */,
 				A34EFE781735BB4A00A86A67 /* ATMConsole.m in Sources */,
+				A30294231737147300D8C9A4 /* ATMBindingManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
