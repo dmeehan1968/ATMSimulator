@@ -57,6 +57,7 @@
 	
 	self.console = [ATMConsole new];
 	self.atmController.console = self.console;
+	self.console.delegate = self;
 	
 }
 

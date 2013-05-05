@@ -10,7 +10,7 @@
 #import "ATMController.h"
 #import "ATMConsole.h"
 
-@interface ATMViewController : UIViewController
+@interface ATMViewController : UIViewController <ATMConsoleDelegate>
 
 @property (strong, nonatomic) ATMController *atmController;
 @property (strong, nonatomic) ATMOperatorSwitch *operatorSwitch;
