@@ -112,9 +112,13 @@ describe(@"ATMViewController", ^{
 			
 		});
 
-		xit(@"should update message UI when message changes", ^{
+		it(@"should update message UI when message changes", ^{
 			
-			// TODO
+			NSString *expectedResult = @"Test Message";
+			
+			[[sut.messageUI should] receive:@selector(setText:) withArguments:expectedResult];
+
+			sut.console.message = expectedResult;
 			
 		});
 
