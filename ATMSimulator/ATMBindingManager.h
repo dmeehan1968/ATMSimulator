@@ -10,4 +10,6 @@
 
 @interface ATMBindingManager : NSObject
 
+-(void) bind: (id) observer keypath: (NSString *) observerKeypath subject: (id) subject keypath: (NSString *) subjectKeypath;
+
 @end
