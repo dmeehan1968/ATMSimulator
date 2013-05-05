@@ -106,6 +106,18 @@ describe(@"ATMViewController", ^{
 			
 		});
 
+		it(@"should have an outlet to represent the message", ^{
+			
+			[sut.messageUI shouldNotBeNil];
+			
+		});
+
+		xit(@"should update message UI when message changes", ^{
+			
+			// TODO
+			
+		});
+
 
 		
 	});
