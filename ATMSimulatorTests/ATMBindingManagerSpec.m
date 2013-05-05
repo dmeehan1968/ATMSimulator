@@ -60,6 +60,8 @@ describe(@"ATMBindingManager", ^{
 		objectA.aStringValue = @"Original Value";
 		
 		[sut bind: objectA keypath: @"aStringValue" subject: objectB keypath: @"bStringValue"];
+
+		[sut enable];
 		
 		objectB.bStringValue = expectedResult;
 		
