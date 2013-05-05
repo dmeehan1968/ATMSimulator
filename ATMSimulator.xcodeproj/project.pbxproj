@@ -26,6 +26,7 @@
 		A3DC5EAE17330E8200677077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8817330E8100677077 /* UIKit.framework */; };
 		A3DC5EAF17330E8200677077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8A17330E8100677077 /* Foundation.framework */; };
 		A3DC5EB717330E8200677077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5EB517330E8200677077 /* InfoPlist.strings */; };
+		A3EA54641736BFF40008D2DF /* ATMConsoleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA54631736BFF40008D2DF /* ATMConsoleSpec.m */; };
 		A3EB786A17356F920061BE26 /* ATMViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EB786917356F920061BE26 /* ATMViewControllerSpec.m */; };
 		A3EB786C173571D00061BE26 /* ATMOperatorSwitchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EB786B173571D00061BE26 /* ATMOperatorSwitchSpec.m */; };
 		A3EB786E1735722C0061BE26 /* ATMOperatorSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EB786D1735722C0061BE26 /* ATMOperatorSwitch.m */; };
@@ -69,6 +70,7 @@
 		A3DC5EAC17330E8200677077 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A3DC5EB417330E8200677077 /* ATMSimulatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATMSimulatorTests-Info.plist"; sourceTree = "<group>"; };
 		A3DC5EB617330E8200677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3EA54631736BFF40008D2DF /* ATMConsoleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMConsoleSpec.m; sourceTree = "<group>"; };
 		A3EB786917356F920061BE26 /* ATMViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMViewControllerSpec.m; sourceTree = "<group>"; };
 		A3EB786B173571D00061BE26 /* ATMOperatorSwitchSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMOperatorSwitchSpec.m; sourceTree = "<group>"; };
 		A3EB786D1735722C0061BE26 /* ATMOperatorSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMOperatorSwitch.m; sourceTree = "<group>"; };
@@ -168,9 +170,10 @@
 		A3DC5EB217330E8200677077 /* ATMSimulatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				A3EA54631736BFF40008D2DF /* ATMConsoleSpec.m */,
 				A39F85D11735568200234A55 /* ATMControllerSpec.m */,
-				A3EB786917356F920061BE26 /* ATMViewControllerSpec.m */,
 				A3EB786B173571D00061BE26 /* ATMOperatorSwitchSpec.m */,
+				A3EB786917356F920061BE26 /* ATMViewControllerSpec.m */,
 				A3DC5EB317330E8200677077 /* Supporting Files */,
 			);
 			path = ATMSimulatorTests;
@@ -342,6 +345,7 @@
 				A39F85D21735568200234A55 /* ATMControllerSpec.m in Sources */,
 				A3EB786A17356F920061BE26 /* ATMViewControllerSpec.m in Sources */,
 				A3EB786C173571D00061BE26 /* ATMOperatorSwitchSpec.m in Sources */,
+				A3EA54641736BFF40008D2DF /* ATMConsoleSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
