@@ -56,6 +56,7 @@
 -(void)setupConsole {
 	
 	self.console = [ATMConsole new];
+	self.atmController.console = self.console;
 	
 }
 
