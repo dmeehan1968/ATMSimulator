@@ -23,6 +23,15 @@ describe(@"ATMConsole", ^{
         [sut shouldNotBeNil];
         
     });
+	
+	it(@"should be able to assign a message", ^{
+		
+		NSString *expectedResult = @"This is a test";
+		sut.message = expectedResult;
+		
+		[[sut.message should] equal: expectedResult];
+	});
+
     
 });
 
