@@ -29,6 +29,8 @@
 	
 	if (state) {
 		[self.console setMessage:@"Please Enter Initial Cash Balance"];
+	} else {
+		[self.console setMessage:@"Not Available"];
 	}
 }
 
