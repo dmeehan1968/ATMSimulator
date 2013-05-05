@@ -88,6 +88,12 @@ describe(@"ATMViewController", ^{
 			
 		});
 
+		it(@"should have console assigned to atm controller", ^{
+			
+			[[(id)sut.atmController.console should] equal:sut.console];
+			
+		});
+
 		
 	});
 
