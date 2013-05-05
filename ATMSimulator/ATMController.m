@@ -8,8 +8,8 @@
 
 #import "ATMController.h"
 
-NSString *ATMControllerMessageNotAvailable = @"Not Available";
-NSString *ATMControllerMessageEnterCashBalance = @"Please Enter Initial Cash Balance";
+NSString * const ATMControllerMessageNotAvailable = @"Not Available";
+NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial Cash Balance";
 
 @implementation ATMController
 
