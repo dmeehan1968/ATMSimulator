@@ -17,14 +17,26 @@
                                     <action selector="didChangeValueForOperatorSwitchUI:" destination="2" eventType="valueChanged" id="y7y-Dy-XjE"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-Vs-ZVk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="cCP-bu-94K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gPd-Vs-ZVk" firstAttribute="top" secondItem="5" secondAttribute="top" constant="278" id="43f-T5-aJc"/>
+                            <constraint firstItem="gPd-Vs-ZVk" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FuV-Pt-IdN"/>
                             <constraint firstItem="0E7-h0-u2E" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="LMd-oC-XMm"/>
                             <constraint firstAttribute="trailing" secondItem="0E7-h0-u2E" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MTg-ij-nsH"/>
+                            <constraint firstAttribute="trailing" secondItem="gPd-Vs-ZVk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kbT-GU-mF8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="messageUI" destination="gPd-Vs-ZVk" id="StV-Ql-uR5"/>
                         <outlet property="operatorSwitchUI" destination="0E7-h0-u2E" id="xfj-oi-gkO"/>
                     </connections>
                 </viewController>
