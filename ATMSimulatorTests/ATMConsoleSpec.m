@@ -10,8 +10,8 @@ describe(@"ATMConsole", ^{
 	
     beforeEach(^{
 		
-        sut = [[ATMConsole alloc] init];
 		delegate = [KWMock mockForProtocol:@protocol(ATMConsoleDelegate)];
+        sut = [[ATMConsole alloc] initWithDelegate: delegate];
 		
     });
     
@@ -26,6 +26,13 @@ describe(@"ATMConsole", ^{
         
     });
 	
+	it(@"should not have a setDelegate: message", ^{
+		
+		[[sut shouldNot] respondToSelector:@selector(setDelegate:)];
+		
+	});
+
+	
 	it(@"should be able to assign a message", ^{
 		
 		NSString *expectedResult = @"This is a test";
@@ -34,25 +41,9 @@ describe(@"ATMConsole", ^{
 		[[sut.message should] equal: expectedResult];
 	});
 	
-	it(@"should have a delegate property", ^{
-		
-		sut.delegate = nil;
-		
-	});
-
-	it(@"can assign a delegate that conforms to ATMConsoleDelegate", ^{
-		
-		sut.delegate = delegate;
-		
-		[[(id)sut.delegate should] equal: delegate];
-		
-	});
-
 	it(@"should notify delegate when message changes", ^{
 
 		NSString *expectedResult = @"Test Message";
-		
-		sut.delegate = delegate;
 		
 		[[delegate should] receive:@selector(console:didChangeMessage:) withArguments:sut,expectedResult];
 		
