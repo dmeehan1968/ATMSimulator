@@ -100,6 +100,12 @@ describe(@"ATMViewController", ^{
 			
 		});
 
+		it(@"should respond to console:didChangeMessage: notification", ^{
+			
+			[[sut should] respondToSelector:@selector(console:didChangeMessage:)];
+			
+		});
+
 
 		
 	});
