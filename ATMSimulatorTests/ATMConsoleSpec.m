@@ -31,6 +31,13 @@ describe(@"ATMConsole", ^{
 		
 		[[sut.message should] equal: expectedResult];
 	});
+	
+	it(@"should have a delegate property", ^{
+		
+		sut.delegate = nil;
+		
+	});
+
 
     
 });
