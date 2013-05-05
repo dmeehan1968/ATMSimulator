@@ -94,7 +94,18 @@ describe(@"ATM Controller", ^{
 
 	});
 
-    
+	context(@"Taking Out of Service", ^{
+		
+		it(@"should set console message to 'not available'", ^{
+			
+			[[(id)sut.console should] receive:@selector(setMessage:) withArguments:@"Not Available"];
+			
+			[sut operatorSwitch: operatorSwitch didChangeToState: NO];
+			
+		});
+		
+	});
+
 });
 
 SPEC_END
