@@ -38,7 +38,7 @@ describe(@"ATM Controller", ^{
 			
 			console = [KWMock mockForProtocol:@protocol(ATMConsole)];
 			
-			[[console should] receive:@selector(setMessage:) withArguments:@"Not Available"];
+			[[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
 			
 			sut.console = console;
 			
@@ -80,7 +80,7 @@ describe(@"ATM Controller", ^{
 		
 		it(@"should ask for initial balance when operator switch turned on", ^{
 			
-			[[(id)sut.console should] receive:@selector(setMessage:) withArguments:@"Please Enter Initial Cash Balance"];
+			[[(id)sut.console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageEnterCashBalance];
 			
 			[sut operatorSwitch: operatorSwitch didChangeToState:YES];
 			
@@ -98,7 +98,7 @@ describe(@"ATM Controller", ^{
 		
 		it(@"should set console message to 'not available'", ^{
 			
-			[[(id)sut.console should] receive:@selector(setMessage:) withArguments:@"Not Available"];
+			[[(id)sut.console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
 			
 			[sut operatorSwitch: operatorSwitch didChangeToState: NO];
 			

@@ -8,13 +8,16 @@
 
 #import "ATMController.h"
 
+NSString *ATMControllerMessageNotAvailable = @"Not Available";
+NSString *ATMControllerMessageEnterCashBalance = @"Please Enter Initial Cash Balance";
+
 @implementation ATMController
 
 -(void)setConsole:(id<ATMConsole>)console {
 	
 	_console = console;
 	
-	[_console setMessage:@"Not Available"];
+	[_console setMessage:ATMControllerMessageNotAvailable];
 	
 }
 
@@ -28,9 +31,9 @@
 -(void)operatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch didChangeToState:(BOOL)state {
 	
 	if (state) {
-		[self.console setMessage:@"Please Enter Initial Cash Balance"];
+		[self.console setMessage:ATMControllerMessageEnterCashBalance];
 	} else {
-		[self.console setMessage:@"Not Available"];
+		[self.console setMessage:ATMControllerMessageNotAvailable];
 	}
 }
 

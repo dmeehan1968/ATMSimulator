@@ -10,6 +10,9 @@
 #import "ATMConsole.h"
 #import "ATMOperatorSwitch.h"
 
+extern NSString *ATMControllerMessageNotAvailable;
+extern NSString *ATMControllerMessageEnterCashBalance;
+
 @interface ATMController : NSObject <ATMOperatorSwitchDelegate>
 
 @property (weak, nonatomic) id<ATMConsole> console;
