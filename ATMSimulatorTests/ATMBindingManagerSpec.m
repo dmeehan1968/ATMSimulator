@@ -68,6 +68,26 @@ describe(@"ATMBindingManager", ^{
 		[[objectA.aStringValue should] equal:expectedResult];
 		
 	});
+	
+	it(@"should create a two-way binding", ^{
+		
+		NSString *firstChange = @"ObjectB First Change";
+		NSString *secondChange = @"ObjectA Second Change";
+		
+		objectA.aStringValue = @"ObjectA Original Value";
+		
+		[sut bindBothObserver: objectA keypath: @"aStringValue" toSubject: objectB keypath: @"bStringValue"];
+		
+		[sut enable];
+		
+		objectB.bStringValue = firstChange;
+		
+		objectA.aStringValue = secondChange;
+		
+		[[objectB.bStringValue should] equal:secondChange];		
+		
+	});
+
 
     
 });
