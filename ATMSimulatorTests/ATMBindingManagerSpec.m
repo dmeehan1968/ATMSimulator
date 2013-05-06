@@ -90,7 +90,6 @@ describe(@"ATMBindingManager", ^{
 	
 	it(@"should ignore changes when bindings disabled", ^{
 		
-		
 		NSString *newValue = @"New Value";
 		NSString *originalValue = @"Original Value";
 		objectA.aStringValue = originalValue;
@@ -104,9 +103,21 @@ describe(@"ATMBindingManager", ^{
 		[[objectA.aStringValue should] equal:originalValue];
 		
 	});
-
-
-
+	
+	it(@"should not enable new bindings if binding manager already enabled", ^{
+		
+		NSString *originalValue = @"Original Value";
+		objectA.aStringValue = originalValue;
+		
+		[sut enable];
+		
+		[sut bindObserver:objectA keypath:@"aStringValue" toSubject:objectB keypath:@"bStringValue"];
+		
+		objectB.bStringValue = @"Not Relevant";
+		
+		[[objectA.aStringValue should] equal:originalValue];
+		
+	});
     
 });
 
