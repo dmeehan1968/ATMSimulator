@@ -87,6 +87,24 @@ describe(@"ATMBindingManager", ^{
 		[[objectB.bStringValue should] equal:secondChange];		
 		
 	});
+	
+	it(@"should ignore changes when bindings disabled", ^{
+		
+		
+		NSString *newValue = @"New Value";
+		NSString *originalValue = @"Original Value";
+		objectA.aStringValue = originalValue;
+		
+		[sut bindObserver: objectA keypath: @"aStringValue" toSubject: objectB keypath: @"bStringValue"];
+		
+		[sut disable]; // NB: Disabled by default, but for test clarity
+		
+		objectB.bStringValue = newValue;
+		
+		[[objectA.aStringValue should] equal:originalValue];
+		
+	});
+
 
 
     
