@@ -11,6 +11,7 @@
 @interface ATMBindingManager : NSObject
 
 -(void) bindObserver: (id) observer keypath: (NSString *) observerKeypath toSubject: (id) subject keypath: (NSString *) subjectKeypath;
+-(void) bindBothObserver: (id) observer keypath: (NSString *) observerKeypath toSubject: (id) subject keypath: (NSString *) subjectKeypath;
 
 -(void)enable;
 -(void)disable;

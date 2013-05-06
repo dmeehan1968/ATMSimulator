@@ -64,9 +64,11 @@
 	
 	id newValue = [change valueForKey: NSKeyValueChangeNewKey];
 	
-	NSLog(@"New Value: %@", newValue);
+	id oldValue = [self.observer valueForKey:self.observerKeypath];
 	
-	[self.observer setValue:newValue forKey:self.observerKeypath];
+	if (oldValue != newValue) {
+		[self.observer setValue:newValue forKey:self.observerKeypath];
+	}
 	
 }
 
@@ -92,6 +94,14 @@
 	ATMBinding *binding = [[ATMBinding alloc] initWithObserver:observer keypath:observerKeypath forSubject:subject keypath:subjectKeypath];
 	
 	self.bindings = [self.bindings arrayByAddingObject:binding];
+}
+
+-(void)bindBothObserver:(id)observer keypath:(NSString *)observerKeypath toSubject:(id)subject keypath:(NSString *)subjectKeypath {
+
+	[self bindObserver:observer keypath:observerKeypath toSubject:subject keypath:subjectKeypath];
+	
+	[self bindObserver:subject keypath:subjectKeypath toSubject:observer keypath:observerKeypath];
+	
 }
 
 -(void)enable {
