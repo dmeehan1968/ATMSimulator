@@ -72,9 +72,24 @@
 
 	self.bindings = [self.bindings arrayByAddingObject:binding];
 	
-	[binding enable];
 }
 
+-(void)enable {
+	
+	[self.bindings enumerateObjectsUsingBlock:^(ATMBinding *binding, NSUInteger idx, BOOL *stop) {
+		
+		[binding enable];
+		
+	}];
+}
 
+-(void)disable {
+	
+	[self.bindings enumerateObjectsUsingBlock:^(ATMBinding *binding, NSUInteger idx, BOOL *stop) {
+		
+		[binding disable];
+		
+	}];
+}
 
 @end
