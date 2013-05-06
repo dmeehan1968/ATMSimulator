@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *observerKeypath;
 @property (weak) id subject;
 @property (strong, nonatomic) NSString *subjectKeypath;
+@property (assign, nonatomic, getter = isEnabled) BOOL enable;
 
 -(void)enable;
 -(void)disable;
@@ -24,11 +25,19 @@
 
 -(void)enable {
 
+	if (self.isEnabled) {
+		return;
+	}
+	
 	[self.subject addObserver:self forKeyPath:self.subjectKeypath options:NSKeyValueObservingOptionNew context:nil];
 }
 
 -(void)disable {
 
+	if (self.isEnabled == NO) {
+		return;
+	}
+	
 	[self.subject removeObserver:self forKeyPath:self.subjectKeypath context:nil];
 	
 }
