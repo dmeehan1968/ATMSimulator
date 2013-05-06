@@ -50,7 +50,7 @@ describe(@"ATMBindingManager", ^{
 	
 	it(@"should allow a binding to be made between two objects", ^{
 		
-		[sut bind: objectA keypath: @"aStringValue" subject: objectB keypath: @"bStringValue"];
+		[sut bindObserver: objectA keypath: @"aStringValue" toSubject: objectB keypath: @"bStringValue"];
 		
 	});
 
@@ -59,7 +59,7 @@ describe(@"ATMBindingManager", ^{
 		NSString *expectedResult = @"New Value";
 		objectA.aStringValue = @"Original Value";
 		
-		[sut bind: objectA keypath: @"aStringValue" subject: objectB keypath: @"bStringValue"];
+		[sut bindObserver: objectA keypath: @"aStringValue" toSubject: objectB keypath: @"bStringValue"];
 
 		[sut enable];
 		

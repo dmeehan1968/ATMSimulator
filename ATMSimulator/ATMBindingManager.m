@@ -10,11 +10,13 @@
 
 @interface ATMBinding : NSObject
 
-@property (weak) id observer;
-@property (strong, nonatomic) NSString *observerKeypath;
-@property (weak) id subject;
-@property (strong, nonatomic) NSString *subjectKeypath;
-@property (assign, nonatomic, getter = isEnabled) BOOL enable;
+@property (weak, readonly) id observer;
+@property (strong, nonatomic, readonly) NSString *observerKeypath;
+@property (weak, readonly) id subject;
+@property (strong, nonatomic, readonly) NSString *subjectKeypath;
+@property (assign, nonatomic, getter = isEnabled, readonly) BOOL enable;
+
+-(id)initWithObserver: (id) observer keypath: (NSString *) observerKeypath forSubject: (id) subject keypath: (NSString *) subjectKeypath;
 
 -(void)enable;
 -(void)disable;
@@ -22,6 +24,21 @@
 @end
 
 @implementation ATMBinding
+
+-(id)initWithObserver:(id)observer keypath:(NSString *)observerKeypath forSubject:(id)subject keypath:(NSString *)subjectKeypath {
+
+	if (self = [super init]) {
+		
+		_observer = observer;
+		_observerKeypath = observerKeypath;
+		_subject = subject;
+		_subjectKeypath = subjectKeypath;
+		_enable = NO;
+		
+	}
+	
+	return self;
+}
 
 -(void)enable {
 
@@ -70,17 +87,11 @@
 	return self;
 }
 
--(void)bind:(id)observer keypath:(NSString *)observerKeypath subject:(id)subject keypath:(NSString *)subjectKeypath {
+-(void)bindObserver:(id)observer keypath:(NSString *)observerKeypath toSubject:(id)subject keypath:(NSString *)subjectKeypath {
 	
-	ATMBinding *binding = [ATMBinding new];
+	ATMBinding *binding = [[ATMBinding alloc] initWithObserver:observer keypath:observerKeypath forSubject:subject keypath:subjectKeypath];
 	
-	binding.observer = observer;
-	binding.observerKeypath = observerKeypath;
-	binding.subject = subject;
-	binding.subjectKeypath = subjectKeypath;
-
 	self.bindings = [self.bindings arrayByAddingObject:binding];
-	
 }
 
 -(void)enable {
