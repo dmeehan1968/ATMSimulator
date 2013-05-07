@@ -32,9 +32,12 @@
 @property (strong, nonatomic, readonly) ATMKeypath *observerKeypath;
 @property (weak, readonly) id subject;
 @property (strong, nonatomic, readonly) ATMKeypath *subjectKeypath;
+@property (strong, nonatomic, readonly) id (^translator)(id newValue);
 @property (assign, nonatomic, getter = isEnabled, readonly) BOOL enable;
 
 -(id)initWithObserver: (id) observer keypath: (ATMKeypath *) observerKeypath forSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath;
+
+-(id)initWithObserver: (id) observer keypath: (ATMKeypath *) observerKeypath forSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath translator: (id(^)(id newValue)) translator;
 
 -(void)enable;
 -(void)disable;
@@ -45,12 +48,18 @@
 
 -(id)initWithObserver:(id)observer keypath:(ATMKeypath *)observerKeypath forSubject:(id)subject keypath:(ATMKeypath *)subjectKeypath {
 
+	return [self initWithObserver:observer keypath:observerKeypath forSubject:subject keypath:subjectKeypath translator:nil];
+}
+
+-(id)initWithObserver:(id)observer keypath:(ATMKeypath *)observerKeypath forSubject:(id)subject keypath:(ATMKeypath *)subjectKeypath translator:(id (^)(id))translator {
+	
 	if (self = [super init]) {
 		
 		_observer = observer;
 		_observerKeypath = observerKeypath;
 		_subject = subject;
 		_subjectKeypath = subjectKeypath;
+		_translator = translator;
 		_enable = NO;
 		
 	}
@@ -85,6 +94,13 @@
 	id oldValue = [self.observer valueForKey:self.observerKeypath.stringValue];
 	
 	if (oldValue != newValue) {
+		
+		if (self.translator) {
+		
+			newValue = self.translator(newValue);
+
+		}
+		
 		[self.observer setValue:newValue forKey:self.observerKeypath.stringValue];
 	}
 	
@@ -110,6 +126,13 @@
 -(void)bindObserver:(id)observer keypath:(ATMKeypath *)observerKeypath toSubject:(id)subject keypath:(ATMKeypath *)subjectKeypath {
 	
 	ATMBinding *binding = [[ATMBinding alloc] initWithObserver:observer keypath:observerKeypath forSubject:subject keypath:subjectKeypath];
+	
+	self.bindings = [self.bindings arrayByAddingObject:binding];
+}
+
+-(void)bindObserver:(id)observer keypath:(ATMKeypath *)observerKeypath toSubject:(id)subject keypath:(ATMKeypath *)subjectKeypath translator:(id (^)(id))translator {
+	
+	ATMBinding *binding = [[ATMBinding alloc] initWithObserver:observer keypath:observerKeypath forSubject:subject keypath:subjectKeypath translator: translator];
 	
 	self.bindings = [self.bindings arrayByAddingObject:binding];
 }

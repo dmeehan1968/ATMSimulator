@@ -150,7 +150,7 @@ describe(@"ATMBindingManager", ^{
 				toSubject:objectA
 				  keypath:keypath(objectA.boolValue)
 			   translator:^id(id newValue) {
-				   return newValue;
+				   return [newValue boolValue] ? @"On" : @"Off";
 			   }];
 
 		[sut enable];
