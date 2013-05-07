@@ -10,7 +10,7 @@
 
 @implementation ATMKeypath
 
-+(id)keypathWithString:(NSString *)stringValue expression:(id)var {
++(id)keypathWithString:(NSString *)stringValue expression:(void *)var {
 	
 	id keypath = [[self alloc] init];
 	

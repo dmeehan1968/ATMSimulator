@@ -4,6 +4,7 @@
 @interface ObjectA : NSObject
 
 @property (strong, nonatomic) NSString *aStringValue;
+@property (assign, nonatomic) BOOL boolValue;
 
 @end
 
@@ -141,6 +142,25 @@ describe(@"ATMBindingManager", ^{
 		[[objectA.aStringValue should] equal:originalValue];
 		
 	});
+	
+	it(@"should provide translation block to convert between types for one-way bindings", ^{
+	
+		[sut bindObserver:objectB
+				  keypath:keypath(objectB.bStringValue)
+				toSubject:objectA
+				  keypath:keypath(objectA.boolValue)
+			   translator:^id(id newValue) {
+				   return newValue;
+			   }];
+
+		[sut enable];
+		
+		objectA.boolValue = YES;
+		
+		[[objectB.bStringValue should] equal:@"On"];
+		
+	});
+
     
 });
 

@@ -12,15 +12,18 @@
 
 @property (strong, nonatomic) NSString *stringValue;
 
-+(id) keypathWithString: (NSString *) stringValue expression: (id) var;
++(id) keypathWithString: (NSString *) stringValue expression: (void *) var;
 
 @end
 
-#define keypath(var) [ATMKeypath keypathWithString: @#var expression: var]
+#define keypath(var) ([ATMKeypath keypathWithString: @#var expression: (void *)var])
 
 @interface ATMBindingManager : NSObject
 
 -(void) bindObserver: (id) observer keypath: (ATMKeypath *) observerKeypath toSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath;
+
+-(void) bindObserver: (id) observer keypath: (ATMKeypath *) observerKeypath toSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath translator: (id (^)(id newValue)) translator;
+
 -(void) bindBothObserver: (id) observer keypath: (ATMKeypath *) observerKeypath toSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath;
 
 -(void)enable;
