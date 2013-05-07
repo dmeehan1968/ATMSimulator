@@ -5,7 +5,7 @@
 	<key>0CC7F4C3-45A0-4B67-850B-7A25F4D1F30D</key>
 	<dict>
 		<key>Visible Rect</key>
-		<string>{{0, 0}, {1541, 973}}</string>
+		<string>{{0, 20}, {1541, 973}}</string>
 		<key>Zoom Factor</key>
 		<real>1</real>
 	</dict>
@@ -40,7 +40,7 @@
 	<array/>
 	<key>Last Viewed Ideaspaces For Section BCFD3DE4-E14A-4847-B78F-0C5E38BC876B</key>
 	<array>
-		<string>230C3CF3-32BA-44F1-8E8C-97DA1AB6F0C4</string>
+		<string>0CC7F4C3-45A0-4B67-850B-7A25F4D1F30D</string>
 	</array>
 	<key>Last Viewed Section</key>
 	<array>
@@ -53,7 +53,7 @@
 	<key>Organizer Width</key>
 	<integer>220</integer>
 	<key>Primary Asset UUID Last Viewed</key>
-	<string>230C3CF3-32BA-44F1-8E8C-97DA1AB6F0C4</string>
+	<string>0CC7F4C3-45A0-4B67-850B-7A25F4D1F30D</string>
 	<key>Secondary View Vertical</key>
 	<false/>
 	<key>Secondary View Visible</key>
