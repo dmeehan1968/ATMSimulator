@@ -8,6 +8,24 @@
 
 #import "ATMBindingManager.h"
 
+@implementation ATMKeypath
+
++(id)keypathWithString:(NSString *)stringValue expression:(id)var {
+	
+	id keypath = [[self alloc] init];
+	
+	NSArray *array = [stringValue componentsSeparatedByString:@"."];
+	
+	array = [array subarrayWithRange:NSMakeRange(1, array.count - 1)];
+	
+	[keypath setStringValue: [array componentsJoinedByString:@"."]];
+	
+	return keypath;
+}
+
+@end
+
+
 @interface ATMBinding : NSObject
 
 @property (weak, readonly) id observer;

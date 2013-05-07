@@ -52,7 +52,7 @@ describe(@"ATMBindingManager", ^{
 		
 		ATMKeypath *keypath = keypath(objectA.aStringValue);
 
-		[[keypath.keypath should] equal: @"aStringValue"];
+		[[keypath.stringValue should] equal: @"aStringValue"];
 	});
 
 	

@@ -17,3 +17,16 @@
 -(void)disable;
 
 @end
+
+@interface ATMKeypath : NSObject
+
+@property (strong, nonatomic) NSString *stringValue;
+
++(id) keypathWithString: (NSString *) stringValue expression: (id) var;
+
+@end
+
+#define keypath(var) [ATMKeypath keypathWithString: @#var expression: var]
+
+
+
