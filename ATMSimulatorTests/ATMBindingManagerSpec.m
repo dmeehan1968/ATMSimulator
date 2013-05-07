@@ -165,16 +165,28 @@ describe(@"ATMBindingManager", ^{
        
         [sut bindBothObserver:objectA
                       keypath:keypath(objectA.boolValue)
+                   translator:^id(id newValue) {
+
+                       return [NSNumber numberWithBool:[newValue isEqual:@"On"] ? YES : NO];
+
+                   }
                     toSubject:objectB
                       keypath:keypath(objectB.bStringValue)
-                   translator:^id(BOOL forObserver, id newValue) {
-                       
-                       if (forObserver) {
-                           return [newValue boolValue] ? @"On" : @"Off";
-                       }
-                       return [NSNumber numberWithBool:[newValue isEqual:@"On"] ? YES : NO];
+                   translator:^id(id newValue) {
+
+                       return [newValue boolValue] ? @"On" : @"Off";
                        
                    }];
+        
+        [sut enable];
+        
+        objectA.boolValue = YES;
+        
+        [[objectB.bStringValue should] equal: @"On"];
+        
+        objectB.bStringValue = @"Off";
+        
+        [[theValue(objectA.boolValue) should] beNo];
         
     });
     

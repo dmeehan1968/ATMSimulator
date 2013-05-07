@@ -26,6 +26,8 @@
 
 -(void) bindBothObserver: (id) observer keypath: (ATMKeypath *) observerKeypath toSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath;
 
+-(void) bindBothObserver: (id) observer keypath: (ATMKeypath *) observerKeypath translator: (id (^)(id newValue)) observerTranslator toSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath translator: (id (^)(id newValue)) subjectTranslator;
+
 -(void)enable;
 -(void)disable;
 

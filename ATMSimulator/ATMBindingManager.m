@@ -34,6 +34,7 @@
 @property (strong, nonatomic, readonly) ATMKeypath *subjectKeypath;
 @property (strong, nonatomic, readonly) id (^translator)(id newValue);
 @property (assign, nonatomic, getter = isEnabled, readonly) BOOL enable;
+@property (assign, nonatomic, getter = isBeingAssigned) BOOL beingAssigned;
 
 -(id)initWithObserver: (id) observer keypath: (ATMKeypath *) observerKeypath forSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath;
 
@@ -89,21 +90,24 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
 	
+    if (self.isBeingAssigned) {
+        
+        return;
+    }
+    
+    self.beingAssigned = YES;
+    
 	id newValue = [change valueForKey: NSKeyValueChangeNewKey];
 	
-	id oldValue = [self.observer valueForKey:self.observerKeypath.stringValue];
-	
-	if (oldValue != newValue) {
-		
-		if (self.translator) {
-		
-			newValue = self.translator(newValue);
+    if (self.translator) {
+    
+        newValue = self.translator(newValue);
 
-		}
-		
-		[self.observer setValue:newValue forKey:self.observerKeypath.stringValue];
-	}
+    }
+    
+    [self.observer setValue:newValue forKey:self.observerKeypath.stringValue];
 	
+    self.beingAssigned = NO;
 }
 
 @end
@@ -143,6 +147,13 @@
 	
 	[self bindObserver:subject keypath:subjectKeypath toSubject:observer keypath:observerKeypath];
 	
+}
+
+-(void)bindBothObserver:(id)observer keypath:(ATMKeypath *)observerKeypath translator:(id (^)(id))observerTranslator toSubject:(id)subject keypath:(ATMKeypath *)subjectKeypath translator:(id (^)(id))subjectTranslator {
+    
+	[self bindObserver:observer keypath:observerKeypath toSubject:subject keypath:subjectKeypath translator:observerTranslator];
+	
+	[self bindObserver:subject keypath:subjectKeypath toSubject:observer keypath:observerKeypath translator:subjectTranslator];
 }
 
 -(void)enable {
