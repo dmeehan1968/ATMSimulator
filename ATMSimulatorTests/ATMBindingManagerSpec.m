@@ -48,6 +48,14 @@ describe(@"ATMBindingManager", ^{
         
     });
 	
+	it(@"should define a keypath macro so that keypaths are objects and refactoring produces compile time errors", ^{
+		
+		ATMKeypath *keypath = keypath(objectA.aStringValue);
+
+		[[keypath.keypath should] equal: @"aStringValue"];
+	});
+
+	
 	it(@"should allow a binding to be made between two objects", ^{
 		
 		[sut bindObserver: objectA keypath: @"aStringValue" toSubject: objectB keypath: @"bStringValue"];
