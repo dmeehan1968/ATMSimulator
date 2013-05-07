@@ -75,6 +75,7 @@
 		A3DC5EAC17330E8200677077 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A3DC5EB417330E8200677077 /* ATMSimulatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATMSimulatorTests-Info.plist"; sourceTree = "<group>"; };
 		A3DC5EB617330E8200677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3E654E4173998AD00599E6E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file; path = README.md; sourceTree = "<group>"; };
 		A3EA54631736BFF40008D2DF /* ATMConsoleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMConsoleSpec.m; sourceTree = "<group>"; };
 		A3EB786917356F920061BE26 /* ATMViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMViewControllerSpec.m; sourceTree = "<group>"; };
 		A3EB786B173571D00061BE26 /* ATMOperatorSwitchSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMOperatorSwitchSpec.m; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		A3DC5E7C17330E8100677077 = {
 			isa = PBXGroup;
 			children = (
+				A3E654E4173998AD00599E6E /* README.md */,
 				A3DC5E8E17330E8100677077 /* ATMSimulator */,
 				A3DC5EB217330E8200677077 /* ATMSimulatorTests */,
 				A3DC5E8717330E8100677077 /* Frameworks */,
