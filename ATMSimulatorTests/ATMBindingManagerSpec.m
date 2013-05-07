@@ -161,6 +161,22 @@ describe(@"ATMBindingManager", ^{
 		
 	});
 
+    it(@"should provide translation block to convert between type for two-way bindings", ^{
+       
+        [sut bindBothObserver:objectA
+                      keypath:keypath(objectA.boolValue)
+                    toSubject:objectB
+                      keypath:keypath(objectB.bStringValue)
+                   translator:^id(BOOL forObserver, id newValue) {
+                       
+                       if (forObserver) {
+                           return [newValue boolValue] ? @"On" : @"Off";
+                       }
+                       return [NSNumber numberWithBool:[newValue isEqual:@"On"] ? YES : NO];
+                       
+                   }];
+        
+    });
     
 });
 
