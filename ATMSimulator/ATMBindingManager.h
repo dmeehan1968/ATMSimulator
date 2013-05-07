@@ -8,16 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ATMBindingManager : NSObject
-
--(void) bindObserver: (id) observer keypath: (NSString *) observerKeypath toSubject: (id) subject keypath: (NSString *) subjectKeypath;
--(void) bindBothObserver: (id) observer keypath: (NSString *) observerKeypath toSubject: (id) subject keypath: (NSString *) subjectKeypath;
-
--(void)enable;
--(void)disable;
-
-@end
-
 @interface ATMKeypath : NSObject
 
 @property (strong, nonatomic) NSString *stringValue;
@@ -28,5 +18,13 @@
 
 #define keypath(var) [ATMKeypath keypathWithString: @#var expression: var]
 
+@interface ATMBindingManager : NSObject
 
+-(void) bindObserver: (id) observer keypath: (ATMKeypath *) observerKeypath toSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath;
+-(void) bindBothObserver: (id) observer keypath: (ATMKeypath *) observerKeypath toSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath;
+
+-(void)enable;
+-(void)disable;
+
+@end
 

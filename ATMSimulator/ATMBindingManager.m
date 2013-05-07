@@ -29,12 +29,12 @@
 @interface ATMBinding : NSObject
 
 @property (weak, readonly) id observer;
-@property (strong, nonatomic, readonly) NSString *observerKeypath;
+@property (strong, nonatomic, readonly) ATMKeypath *observerKeypath;
 @property (weak, readonly) id subject;
-@property (strong, nonatomic, readonly) NSString *subjectKeypath;
+@property (strong, nonatomic, readonly) ATMKeypath *subjectKeypath;
 @property (assign, nonatomic, getter = isEnabled, readonly) BOOL enable;
 
--(id)initWithObserver: (id) observer keypath: (NSString *) observerKeypath forSubject: (id) subject keypath: (NSString *) subjectKeypath;
+-(id)initWithObserver: (id) observer keypath: (ATMKeypath *) observerKeypath forSubject: (id) subject keypath: (ATMKeypath *) subjectKeypath;
 
 -(void)enable;
 -(void)disable;
@@ -43,7 +43,7 @@
 
 @implementation ATMBinding
 
--(id)initWithObserver:(id)observer keypath:(NSString *)observerKeypath forSubject:(id)subject keypath:(NSString *)subjectKeypath {
+-(id)initWithObserver:(id)observer keypath:(ATMKeypath *)observerKeypath forSubject:(id)subject keypath:(ATMKeypath *)subjectKeypath {
 
 	if (self = [super init]) {
 		
@@ -64,7 +64,7 @@
 		return;
 	}
 	
-	[self.subject addObserver:self forKeyPath:self.subjectKeypath options:NSKeyValueObservingOptionNew context:nil];
+	[self.subject addObserver:self forKeyPath:self.subjectKeypath.stringValue options:NSKeyValueObservingOptionNew context:nil];
 }
 
 -(void)disable {
@@ -73,7 +73,7 @@
 		return;
 	}
 	
-	[self.subject removeObserver:self forKeyPath:self.subjectKeypath context:nil];
+	[self.subject removeObserver:self forKeyPath:self.subjectKeypath.stringValue context:nil];
 	
 }
 
@@ -82,10 +82,10 @@
 	
 	id newValue = [change valueForKey: NSKeyValueChangeNewKey];
 	
-	id oldValue = [self.observer valueForKey:self.observerKeypath];
+	id oldValue = [self.observer valueForKey:self.observerKeypath.stringValue];
 	
 	if (oldValue != newValue) {
-		[self.observer setValue:newValue forKey:self.observerKeypath];
+		[self.observer setValue:newValue forKey:self.observerKeypath.stringValue];
 	}
 	
 }
@@ -107,14 +107,14 @@
 	return self;
 }
 
--(void)bindObserver:(id)observer keypath:(NSString *)observerKeypath toSubject:(id)subject keypath:(NSString *)subjectKeypath {
+-(void)bindObserver:(id)observer keypath:(ATMKeypath *)observerKeypath toSubject:(id)subject keypath:(ATMKeypath *)subjectKeypath {
 	
 	ATMBinding *binding = [[ATMBinding alloc] initWithObserver:observer keypath:observerKeypath forSubject:subject keypath:subjectKeypath];
 	
 	self.bindings = [self.bindings arrayByAddingObject:binding];
 }
 
--(void)bindBothObserver:(id)observer keypath:(NSString *)observerKeypath toSubject:(id)subject keypath:(NSString *)subjectKeypath {
+-(void)bindBothObserver:(id)observer keypath:(ATMKeypath *)observerKeypath toSubject:(id)subject keypath:(ATMKeypath *)subjectKeypath {
 
 	[self bindObserver:observer keypath:observerKeypath toSubject:subject keypath:subjectKeypath];
 	

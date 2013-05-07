@@ -58,7 +58,10 @@ describe(@"ATMBindingManager", ^{
 	
 	it(@"should allow a binding to be made between two objects", ^{
 		
-		[sut bindObserver: objectA keypath: @"aStringValue" toSubject: objectB keypath: @"bStringValue"];
+		[sut bindObserver: objectA
+				  keypath: keypath(objectA.aStringValue)
+				toSubject: objectB
+				  keypath: keypath(objectB.bStringValue)];
 		
 	});
 
@@ -67,7 +70,10 @@ describe(@"ATMBindingManager", ^{
 		NSString *expectedResult = @"New Value";
 		objectA.aStringValue = @"Original Value";
 		
-		[sut bindObserver: objectA keypath: @"aStringValue" toSubject: objectB keypath: @"bStringValue"];
+		[sut bindObserver: objectA
+				  keypath: keypath(objectA.aStringValue)
+				toSubject: objectB
+				  keypath: keypath(objectB.bStringValue)];
 
 		[sut enable];
 		
@@ -84,7 +90,10 @@ describe(@"ATMBindingManager", ^{
 		
 		objectA.aStringValue = @"ObjectA Original Value";
 		
-		[sut bindBothObserver: objectA keypath: @"aStringValue" toSubject: objectB keypath: @"bStringValue"];
+		[sut bindBothObserver: objectA
+					  keypath: keypath(objectA.aStringValue)
+					toSubject: objectB
+					  keypath: keypath(objectB.bStringValue)];
 		
 		[sut enable];
 		
@@ -102,7 +111,10 @@ describe(@"ATMBindingManager", ^{
 		NSString *originalValue = @"Original Value";
 		objectA.aStringValue = originalValue;
 		
-		[sut bindObserver: objectA keypath: @"aStringValue" toSubject: objectB keypath: @"bStringValue"];
+		[sut bindObserver: objectA
+				  keypath: keypath(objectA.aStringValue)
+				toSubject: objectB
+				  keypath: keypath(objectB.bStringValue)];
 		
 		[sut disable]; // NB: Disabled by default, but for test clarity
 		
@@ -119,7 +131,10 @@ describe(@"ATMBindingManager", ^{
 		
 		[sut enable];
 		
-		[sut bindObserver:objectA keypath:@"aStringValue" toSubject:objectB keypath:@"bStringValue"];
+		[sut bindObserver:objectA
+				  keypath:keypath(objectA.aStringValue)
+				toSubject:objectB
+				  keypath:keypath(objectB.bStringValue)];
 		
 		objectB.bStringValue = @"Not Relevant";
 		
