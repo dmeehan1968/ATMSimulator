@@ -1,6 +1,4 @@
 
-@class ATMConsole;
-
 @protocol ATMConsole <NSObject>
 
 @property (strong, nonatomic) NSString *message;
