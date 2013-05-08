@@ -56,24 +56,16 @@ describe(@"ATM Controller", ^{
 			
 		});
 		
-		it(@"should assign atm controller as operator switch delegate", ^{
-			
-			operatorSwitch = [KWMock mockForProtocol:@protocol(ATMOperatorSwitch)];
-			
-			[[operatorSwitch should] receive:@selector(setDelegate:) withArguments:sut];
-			
-			sut.operatorSwitch = operatorSwitch;
-			
-			[[(id)sut.operatorSwitch should] equal:operatorSwitch];
-			
-		});
-
-		it(@"atm should respond to switch notification", ^{
-			
-			[[sut should] respondToSelector:@selector(operatorSwitch:didChangeToState:)];
-			
-		});
-		
+        it(@"should send initial message to console when operator switch assigned", ^{
+        
+            operatorSwitch = [KWMock mockForProtocol:@protocol(ATMOperatorSwitch)];
+            
+            [[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
+            
+            sut.operatorSwitch = operatorSwitch;
+            
+        });
+        		
 	});
 
 	context(@"Bringing into Service", ^{
