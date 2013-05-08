@@ -46,7 +46,7 @@
 	self.operatorSwitch.state = self.operatorSwitch.state;
 	self.console.message = self.console.message;
 	
-	[super viewWillAppear: animated];
+	[super viewDidAppear: animated];
 	
 }
 
