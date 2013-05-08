@@ -60,42 +60,15 @@ describe(@"ATM Controller", ^{
         
             operatorSwitch = [KWMock mockForProtocol:@protocol(ATMOperatorSwitch)];
             
+            [[operatorSwitch should] receive:@selector(setState:)];
+            [[operatorSwitch should] receive:@selector(state) andReturn:theValue(NO)];
             [[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
-            
+        
+            sut.console = console;
             sut.operatorSwitch = operatorSwitch;
             
         });
         		
-	});
-
-	context(@"Bringing into Service", ^{
-		
-		it(@"should ask for initial balance when operator switch turned on", ^{
-			
-			[[(id)sut.console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageEnterCashBalance];
-			
-			[sut operatorSwitch: operatorSwitch didChangeToState:YES];
-			
-		});
-
-		xit(@"accept input of cash balance", ^{
-			
-			// TODO
-			
-		});
-
-	});
-
-	context(@"Taking Out of Service", ^{
-		
-		it(@"should set console message to 'not available'", ^{
-			
-			[[(id)sut.console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
-			
-			[sut operatorSwitch: operatorSwitch didChangeToState: NO];
-			
-		});
-		
 	});
 
 });

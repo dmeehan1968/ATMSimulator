@@ -22,19 +22,31 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 }
 
 -(void)setOperatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch {
-	_operatorSwitch = operatorSwitch;
-	
-	_operatorSwitch.delegate = self;
-	
+
+	if (_operatorSwitch) {
+        [(id)_operatorSwitch removeObserver: self forKeyPath: @"state"];
+    }
+    
+    _operatorSwitch = operatorSwitch;
+    
+    if (_operatorSwitch) {
+        [(id)_operatorSwitch addObserver: self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
+        _operatorSwitch.state = _operatorSwitch.state;
+    }
+
 }
 
--(void)operatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch didChangeToState:(BOOL)state {
-	
-	if (state) {
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+
+    id state = [change valueForKey:NSKeyValueChangeNewKey];
+    
+    if ([state boolValue]) {
 		[self.console setMessage:ATMControllerMessageEnterCashBalance];
 	} else {
 		[self.console setMessage:ATMControllerMessageNotAvailable];
 	}
+    
+    
 }
 
 @end
