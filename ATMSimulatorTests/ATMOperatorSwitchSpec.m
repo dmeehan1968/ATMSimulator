@@ -29,6 +29,15 @@ describe(@"ATMOperatorSwitch", ^{
 		[[theValue(sut.state) should] beNo];
 		
 	});
+	
+	it(@"should allow state to be assigned", ^{
+		
+        sut.state = YES;
+		
+		[[theValue(sut.state) should] beYes];
+        
+    });
+
     
 });
 
