@@ -46,7 +46,7 @@ describe(@"ATMViewController", ^{
 		
 		it(@"should have operator switch assigned to ATM controller", ^{
 			
-			[[(id)sut.atmController.operatorSwitch should] equal: sut.operatorSwitch];
+			[[sut.atmController.operatorSwitch should] equal: sut.operatorSwitch];
 			
 		});
 		
@@ -73,6 +73,15 @@ describe(@"ATMViewController", ^{
 			
 		});
 		
+		it(@"should change UI switch state when model state updated", ^{
+			
+			sut.operatorSwitch.state = !sut.operatorSwitch.state;
+			
+			[[theValue(sut.operatorSwitchUI.isOn) should] equal:theValue(sut.operatorSwitch.state)];
+			
+		});
+
+		
 	});
 
 	context(@"Console", ^{
@@ -85,7 +94,7 @@ describe(@"ATMViewController", ^{
 
 		it(@"should have console assigned to atm controller", ^{
 			
-			[[(id)sut.atmController.console should] equal:sut.console];
+			[[sut.atmController.console should] equal:sut.console];
 			
 		});
 		
@@ -95,13 +104,13 @@ describe(@"ATMViewController", ^{
 			
 		});
 		
-		it(@"should update message UI when message changes", ^{
+		it(@"should update message UI when console message changes", ^{
 			
 			NSString *expectedResult = @"Test Message";
 			
-			[[sut.messageUI should] receive:@selector(setText:) withArguments:expectedResult];
-
 			sut.console.message = expectedResult;
+			
+			[[sut.messageUI.text should] equal:expectedResult];
 			
 		});
 
