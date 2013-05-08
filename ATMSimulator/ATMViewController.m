@@ -29,13 +29,13 @@
 	
 	__weak ATMViewController *weakSelf = self;
 	
-	[self.operatorSwitch addObservationKeyPath:@"state" options:NSKeyValueObservingOptionNew block:^(MAKVONotification *notification) {
+	[self.operatorSwitch addObservationKeyPath:@"state" options:0 block:^(MAKVONotification *notification) {
 		
 		weakSelf.operatorSwitchUI.on = weakSelf.operatorSwitch.state;
 		
 	}];
 
-	[self.console addObservationKeyPath:@"message" options:NSKeyValueObservingOptionNew block:^(MAKVONotification *notification) {
+	[self.console addObservationKeyPath:@"message" options:0 block:^(MAKVONotification *notification) {
 		
 		weakSelf.messageUI.text = weakSelf.console.message;
 		

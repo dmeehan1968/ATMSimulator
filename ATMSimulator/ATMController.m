@@ -25,7 +25,7 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 
     _operatorSwitch = operatorSwitch;
     
-	[_operatorSwitch addObserver:self keyPath:@"state" options:NSKeyValueObservingOptionNew block:^(MAKVONotification *notification) {
+	[_operatorSwitch addObserver:self keyPath:@"state" options:0 block:^(MAKVONotification *notification) {
 		
 		[self.console setMessage: self.operatorSwitch.state ? ATMControllerMessageEnterCashBalance : ATMControllerMessageNotAvailable];
 		
