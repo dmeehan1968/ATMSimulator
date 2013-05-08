@@ -14,10 +14,13 @@ describe(@"ATMViewController", ^{
         sut = [storyboard instantiateViewControllerWithIdentifier:@"ATMUserInterface"];
 		
         [sut view];
+		
+		[sut viewDidAppear:NO];
     });
     
     afterEach(^{
         
+		[sut viewDidDisappear:NO];
         sut = nil;
     });
     
@@ -94,18 +97,6 @@ describe(@"ATMViewController", ^{
 			
 		});
 		
-		it(@"should assign view controller as consoles delegate", ^{
-			
-			[[(id)sut.console.delegate should] equal:sut];
-			
-		});
-
-		it(@"should respond to console:didChangeMessage: notification", ^{
-			
-			[[sut should] respondToSelector:@selector(console:didChangeMessage:)];
-			
-		});
-
 		it(@"should have an outlet to represent the message", ^{
 			
 			[sut.messageUI shouldNotBeNil];

@@ -14,55 +14,22 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 
 @implementation ATMController
 
--(void)setUp {
-
-	[self.console setMessage:ATMControllerMessageNotAvailable];
+-(void)setConsole:(id<ATMConsole>)console {
 	
-	[self.operatorSwitch addObserver:self keyPath:@"state" options:NSKeyValueObservingOptionNew block:^(MAKVONotification *notification) {
+	_console = console;
+	
+	[_console setMessage:ATMControllerMessageNotAvailable];
+}
+
+-(void)setOperatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch {
+
+    _operatorSwitch = operatorSwitch;
+    
+	[_operatorSwitch addObserver:self keyPath:@"state" options:NSKeyValueObservingOptionNew block:^(MAKVONotification *notification) {
 		
 		[self.console setMessage: self.operatorSwitch.state ? ATMControllerMessageEnterCashBalance : ATMControllerMessageNotAvailable];
 		
 	}];
-	
-/*    if (self.operatorSwitch) {
-        [(id)self.operatorSwitch addObserver: self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
-        self.operatorSwitch.state = self.operatorSwitch.state;
-    }
-*/
 }
 
--(void)tearDown {
-	
-//	[(id)self.operatorSwitch removeObserver: self forKeyPath: @"state"];
-	
-	[self.operatorSwitch removeObserver:self keyPath:@"state"];
-}
-
-
-
--(void)setOperatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch {
-
-	if (_operatorSwitch) {
-//        [(id)_operatorSwitch removeObserver: self forKeyPath: @"state"];
-		[_operatorSwitch removeObserver:self keyPath:@"state"];
-
-    }
-    
-    _operatorSwitch = operatorSwitch;
-    
-}
-/*
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-
-    id state = [change valueForKey:NSKeyValueChangeNewKey];
-    
-    if ([state boolValue]) {
-		[self.console setMessage:ATMControllerMessageEnterCashBalance];
-	} else {
-		[self.console setMessage:ATMControllerMessageNotAvailable];
-	}
-    
-    
-}
-*/
 @end

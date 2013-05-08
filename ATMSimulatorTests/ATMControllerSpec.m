@@ -60,8 +60,6 @@ describe(@"ATM Controller", ^{
         
             operatorSwitch = [KWMock mockForProtocol:@protocol(ATMOperatorSwitch)];
             
-            [[operatorSwitch should] receive:@selector(setState:)];
-            [[operatorSwitch should] receive:@selector(state) andReturn:theValue(NO)];
             [[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
         
             sut.console = console;
