@@ -9,6 +9,10 @@ platform :ios
 # ...
 #
 
+target :ATMSimulator, :exclusive => true do
+   pod 'MAKVONotificationCenter'
+end
+
 target :ATMSimulatorTests, :exclusive => true do
    pod 'Kiwi'
 end

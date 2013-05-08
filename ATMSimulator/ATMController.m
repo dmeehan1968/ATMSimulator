@@ -7,35 +7,51 @@
 //
 
 #import "ATMController.h"
+#import <MAKVONotificationCenter.h>
 
 NSString * const ATMControllerMessageNotAvailable = @"Not Available";
 NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial Cash Balance";
 
 @implementation ATMController
 
--(void)setConsole:(id<ATMConsole>)console {
+-(void)setUp {
+
+	[self.console setMessage:ATMControllerMessageNotAvailable];
 	
-	_console = console;
+	[self.operatorSwitch addObserver:self keyPath:@"state" options:NSKeyValueObservingOptionNew block:^(MAKVONotification *notification) {
+		
+		[self.console setMessage: self.operatorSwitch.state ? ATMControllerMessageEnterCashBalance : ATMControllerMessageNotAvailable];
+		
+	}];
 	
-	[_console setMessage:ATMControllerMessageNotAvailable];
-	
+/*    if (self.operatorSwitch) {
+        [(id)self.operatorSwitch addObserver: self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
+        self.operatorSwitch.state = self.operatorSwitch.state;
+    }
+*/
 }
+
+-(void)tearDown {
+	
+//	[(id)self.operatorSwitch removeObserver: self forKeyPath: @"state"];
+	
+	[self.operatorSwitch removeObserver:self keyPath:@"state"];
+}
+
+
 
 -(void)setOperatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch {
 
 	if (_operatorSwitch) {
-        [(id)_operatorSwitch removeObserver: self forKeyPath: @"state"];
+//        [(id)_operatorSwitch removeObserver: self forKeyPath: @"state"];
+		[_operatorSwitch removeObserver:self keyPath:@"state"];
+
     }
     
     _operatorSwitch = operatorSwitch;
     
-    if (_operatorSwitch) {
-        [(id)_operatorSwitch addObserver: self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
-        _operatorSwitch.state = _operatorSwitch.state;
-    }
-
 }
-
+/*
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
 
     id state = [change valueForKey:NSKeyValueChangeNewKey];
@@ -48,5 +64,5 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
     
     
 }
-
+*/
 @end

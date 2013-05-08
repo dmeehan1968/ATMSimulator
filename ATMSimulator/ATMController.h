@@ -16,6 +16,9 @@ extern NSString * const ATMControllerMessageEnterCashBalance;
 @interface ATMController : NSObject
 
 @property (weak, nonatomic) id<ATMConsole> console;
-@property (weak, nonatomic) id<ATMOperatorSwitch> operatorSwitch;
+@property (weak, nonatomic) NSObject<ATMOperatorSwitch> *operatorSwitch;
+
+-(void)setUp;
+-(void)tearDown;
 
 @end

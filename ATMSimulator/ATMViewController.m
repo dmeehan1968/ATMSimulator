@@ -22,8 +22,24 @@
 -(void)viewDidLoad {
 
 	[self setupAtmController];
-	[self setupOperatorSwitch];
-	[self setupConsole];
+	
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+	
+	[self.atmController setUp];
+	
+	self.operatorSwitchUI.on = self.operatorSwitch.state;
+	
+	[super viewWillAppear: animated];
+	
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+	
+	[self.atmController tearDown];
+	
+	[super viewWillDisappear:animated];
 	
 }
 
@@ -32,31 +48,14 @@
 -(void)setupAtmController {
 	
 	self.atmController = [ATMController new];
+	self.atmController.console = self.console = [[ATMConsole alloc] initWithDelegate:self];
+	self.atmController.operatorSwitch = self.operatorSwitch = [ATMOperatorSwitch new];
 	
-}
-
-#pragma mark - Operator Switch
-
--(void)setupOperatorSwitch {
-	
-	self.operatorSwitch = [ATMOperatorSwitch new];
-	self.atmController.operatorSwitch = self.operatorSwitch;
-	self.operatorSwitchUI.on = self.operatorSwitch.state;
-
 }
 
 - (IBAction)didChangeValueForOperatorSwitchUI:(id)sender {
 
 	self.operatorSwitch.state = ((UISwitch *)sender).isOn;
-	
-}
-
-#pragma mark - Console
-
--(void)setupConsole {
-	
-	self.console = [[ATMConsole alloc] initWithDelegate:self];
-	self.atmController.console = self.console;
 	
 }
 
