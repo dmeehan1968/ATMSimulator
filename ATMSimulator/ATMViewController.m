@@ -23,28 +23,8 @@
 
 -(void)viewDidAppear:(BOOL)animated {
 	
-	__weak ATMViewController *weakSelf = self;
-	
-	[self.operatorSwitch addObservationKeyPath:@"state" options:0 block:^(MAKVONotification *notification) {
-		
-		weakSelf.operatorSwitchUI.on = weakSelf.operatorSwitch.state;
-		
-	}];
-
-	[self.operatorSwitchUI valueChanged:^(UIEvent *event) {
-	
-		self.operatorSwitch.state = self.operatorSwitchUI.isOn;
-		
-	}];
-	
-	[self.console addObservationKeyPath:@"message" options:0 block:^(MAKVONotification *notification) {
-		
-		weakSelf.messageUI.text = weakSelf.console.message;
-		
-	}];
-	
-	self.operatorSwitch.state = self.operatorSwitch.state;
-	self.console.message = self.console.message;
+	[self setupOperatorSwitch];
+	[self setupConsole];
 	
 	[super viewDidAppear: animated];
 	
@@ -57,6 +37,43 @@
 	self.atmController = [ATMController new];
 	self.atmController.console = self.console = [ATMConsole new];
 	self.atmController.operatorSwitch = self.operatorSwitch = [ATMOperatorSwitch new];
+	
+}
+
+#pragma mark - Operator Switch
+
+-(void)setupOperatorSwitch {
+
+	__weak ATMViewController *weakSelf = self;
+	
+	[self.operatorSwitch addObservationKeyPath:@"state" options:0 block:^(MAKVONotification *notification) {
+		
+		weakSelf.operatorSwitchUI.on = weakSelf.operatorSwitch.state;
+		
+	}];
+	
+	[self.operatorSwitchUI valueChanged:^(UIEvent *event) {
+		
+		self.operatorSwitch.state = self.operatorSwitchUI.isOn;
+		
+	}];
+
+	self.operatorSwitch.state = self.operatorSwitch.state;
+}
+
+#pragma mark - Console
+
+-(void)setupConsole {
+	
+	__weak ATMViewController *weakSelf = self;
+	
+	[self.console addObservationKeyPath:@"message" options:0 block:^(MAKVONotification *notification) {
+		
+		weakSelf.messageUI.text = weakSelf.console.message;
+		
+	}];
+
+	self.console.message = self.console.message;
 	
 }
 
