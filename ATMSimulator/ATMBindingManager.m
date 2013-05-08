@@ -62,6 +62,7 @@
 		_subjectKeypath = subjectKeypath;
 		_translator = translator;
 		_enable = NO;
+        _beingAssigned = NO;
 		
 	}
 	
@@ -74,6 +75,8 @@
 		return;
 	}
 	
+	NSLog(@"Enabling: %@.%@", [self.subject class], self.subjectKeypath.stringValue);
+    
 	[self.subject addObserver:self forKeyPath:self.subjectKeypath.stringValue options:NSKeyValueObservingOptionNew context:nil];
 }
 
@@ -89,7 +92,8 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	
+	NSLog(@"Observe: %@.%@", [object class], keyPath);
+    
     if (self.isBeingAssigned) {
         
         return;
