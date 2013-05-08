@@ -1,13 +1,16 @@
 PODS:
   - Kiwi (2.0.6)
   - MAKVONotificationCenter (0.0.2)
+  - MTControl (0.0.4)
 
 DEPENDENCIES:
   - Kiwi
   - MAKVONotificationCenter
+  - MTControl
 
 SPEC CHECKSUMS:
   Kiwi: 56082a80f942de4d10423d8d8a599ab30cf50228
   MAKVONotificationCenter: 59483dddd3a24446987b72fbd8fe5af1a4457180
+  MTControl: 048115b2c83d7fac48ecb0cdce264c519cfdaa2d
 
 COCOAPODS: 0.19.1

@@ -8,11 +8,7 @@
 
 #import "ATMViewController.h"
 #import <MAKVONotificationCenter.h>
-
-@interface ATMViewController ()
-
-
-@end
+#import <MTControl/UIControl+MTControl.h>
 
 @implementation ATMViewController
 {}
@@ -35,22 +31,22 @@
 		
 	}];
 
+	[self.operatorSwitchUI valueChanged:^(UIEvent *event) {
+	
+		self.operatorSwitch.state = self.operatorSwitchUI.isOn;
+		
+	}];
+	
 	[self.console addObservationKeyPath:@"message" options:0 block:^(MAKVONotification *notification) {
 		
 		weakSelf.messageUI.text = weakSelf.console.message;
 		
 	}];
-
+	
 	self.operatorSwitch.state = self.operatorSwitch.state;
 	self.console.message = self.console.message;
 	
 	[super viewWillAppear: animated];
-	
-}
-
--(void)viewDidDisappear:(BOOL)animated {
-	
-	[super viewWillDisappear:animated];
 	
 }
 
@@ -61,12 +57,6 @@
 	self.atmController = [ATMController new];
 	self.atmController.console = self.console = [ATMConsole new];
 	self.atmController.operatorSwitch = self.operatorSwitch = [ATMOperatorSwitch new];
-	
-}
-
-- (IBAction)didChangeValueForOperatorSwitchUI:(id)sender {
-
-	self.operatorSwitch.state = ((UISwitch *)sender).isOn;
 	
 }
 

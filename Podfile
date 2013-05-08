@@ -11,6 +11,7 @@ platform :ios
 
 target :ATMSimulator, :exclusive => true do
    pod 'MAKVONotificationCenter'
+   pod 'MTControl'
 end
 
 target :ATMSimulatorTests, :exclusive => true do

@@ -19,6 +19,4 @@
 @property (strong, nonatomic) IBOutlet UISwitch *operatorSwitchUI;
 @property (strong, nonatomic) IBOutlet UILabel *messageUI;
 
-- (IBAction)didChangeValueForOperatorSwitchUI:(id)sender;
-
 @end

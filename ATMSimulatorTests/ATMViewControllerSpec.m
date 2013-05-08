@@ -61,24 +61,16 @@ describe(@"ATMViewController", ^{
 			[[theValue(sut.operatorSwitch.state) should] equal: theValue(sut.operatorSwitchUI.isOn)];
 			
 		});
-
-		it(@"should have an IBAction for changes to UISwitch", ^{
-			
-			[[sut should] respondToSelector:@selector(didChangeValueForOperatorSwitchUI:)];
-			
-			[[[sut.operatorSwitchUI actionsForTarget:sut forControlEvent:UIControlEventValueChanged] should] contain:@"didChangeValueForOperatorSwitchUI:"];
-			
-		});
 		
-		it(@"should change state of operator switch to YES", ^{
+		it(@"should change models operator switch state when UI switch changes value", ^{
 			
-			id mockSwitch = [KWMock mockForClass:[UISwitch class]];
+			// invert current switch position
+			[sut.operatorSwitchUI setOn:!sut.operatorSwitchUI.isOn animated:NO];
+			// need to send control event as state change doesn't
+			[sut.operatorSwitchUI sendActionsForControlEvents:UIControlEventValueChanged];
+			// model state should now equal UI state
+			[[theValue(sut.operatorSwitch.state) should] equal: theValue(sut.operatorSwitchUI.isOn)];
 			
-			[[mockSwitch should] receive:@selector(isOn) andReturn:theValue(YES)];
-			
-			[[sut.operatorSwitch should] receive:@selector(setState:) withArguments:theValue(YES)];
-			
-			[sut didChangeValueForOperatorSwitchUI:mockSwitch];
 		});
 		
 	});
