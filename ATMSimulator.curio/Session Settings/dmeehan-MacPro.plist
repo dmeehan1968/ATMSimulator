@@ -2,21 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>0CC7F4C3-45A0-4B67-850B-7A25F4D1F30D</key>
+	<key>080EFD76-8C4F-4549-9DB7-5A9FB74C6DAD</key>
 	<dict>
 		<key>Visible Rect</key>
 		<string>{{0, 0}, {1541, 973}}</string>
+		<key>Zoom Factor</key>
+		<real>1</real>
+	</dict>
+	<key>0CC7F4C3-45A0-4B67-850B-7A25F4D1F30D</key>
+	<dict>
+		<key>Visible Rect</key>
+		<string>{{0, 40}, {1541, 973}}</string>
 		<key>Zoom Factor</key>
 		<real>1</real>
 	</dict>
 	<key>230C3CF3-32BA-44F1-8E8C-97DA1AB6F0C4</key>
 	<dict>
 		<key>Visible Rect</key>
-		<string>{{0, 0}, {1541, 973}}</string>
+		<string>{{0, 20}, {1541, 973}}</string>
 		<key>Zoom Factor</key>
 		<real>1</real>
 	</dict>
 	<key>4D0ED480-A2CE-4F44-8B5C-197228AAF6B6</key>
+	<dict>
+		<key>Visible Rect</key>
+		<string>{{0, 0}, {1541, 973}}</string>
+		<key>Zoom Factor</key>
+		<real>1</real>
+	</dict>
+	<key>DAECA2B7-7A99-47F3-9935-83477437C5BC</key>
 	<dict>
 		<key>Visible Rect</key>
 		<string>{{0, 0}, {1541, 973}}</string>
@@ -30,6 +44,13 @@
 		<key>Zoom Factor</key>
 		<real>1</real>
 	</dict>
+	<key>E6B7F32E-B52D-4CAA-8E37-8581A31F17B3</key>
+	<dict>
+		<key>Visible Rect</key>
+		<string>{{0, 0}, {1541, 973}}</string>
+		<key>Zoom Factor</key>
+		<real>1</real>
+	</dict>
 	<key>Expanded Ideaspaces</key>
 	<array/>
 	<key>Expanded Ideaspaces For Section BCFD3DE4-E14A-4847-B78F-0C5E38BC876B</key>
@@ -40,20 +61,20 @@
 	<array/>
 	<key>Last Viewed Ideaspaces For Section BCFD3DE4-E14A-4847-B78F-0C5E38BC876B</key>
 	<array>
-		<string>230C3CF3-32BA-44F1-8E8C-97DA1AB6F0C4</string>
+		<string>DAECA2B7-7A99-47F3-9935-83477437C5BC</string>
 	</array>
 	<key>Last Viewed Section</key>
 	<array>
 		<string>BCFD3DE4-E14A-4847-B78F-0C5E38BC876B</string>
 	</array>
 	<key>Normal Window Layout</key>
-	<string>{{508, 311}, {1777, 1071}}</string>
+	<string>{{493, 290}, {1777, 1071}}</string>
 	<key>Organizer Visible</key>
 	<true/>
 	<key>Organizer Width</key>
 	<integer>220</integer>
 	<key>Primary Asset UUID Last Viewed</key>
-	<string>230C3CF3-32BA-44F1-8E8C-97DA1AB6F0C4</string>
+	<string>DAECA2B7-7A99-47F3-9935-83477437C5BC</string>
 	<key>Secondary View Vertical</key>
 	<false/>
 	<key>Secondary View Visible</key>
