@@ -1,13 +1,15 @@
 #import "Kiwi.h"
 #import "ATMController.h"
+#import "ATMConsole.h"
+#import "ATMOperatorSwitch.h"
 
 SPEC_BEGIN(ATMControllerSpec)
 
 describe(@"ATM Controller", ^{
 	
     __block ATMController *sut;
-    __block id console;
-	__block id operatorSwitch;
+    __block ATMConsole *console;
+	__block ATMOperatorSwitch *operatorSwitch;
 	
     beforeAll(^{
 		
@@ -36,7 +38,7 @@ describe(@"ATM Controller", ^{
 		
 		it(@"sets 'not available' when console assigned", ^{
 			
-			console = [KWMock mockForProtocol:@protocol(ATMConsole)];
+			console = [ATMConsole new];
 			
 			[[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
 			
@@ -54,16 +56,25 @@ describe(@"ATM Controller", ^{
 			
 		});
 		
-        it(@"should send initial message to console when operator switch assigned", ^{
+        it(@"should be able to assign operator switch", ^{
         
-            operatorSwitch = [KWMock mockForProtocol:@protocol(ATMOperatorSwitch)];
+            operatorSwitch = [ATMOperatorSwitch new];
 
             sut.operatorSwitch = operatorSwitch;
 			
 			[[sut.operatorSwitch should] equal:operatorSwitch];
             
         });
-        		
+		
+		it(@"should display 'enter cash balance' when operator switch moved to ON", ^{
+			
+			[[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageEnterCashBalance];
+			
+			operatorSwitch.state = YES;
+			
+		});
+
+        
 	});
 
 });
