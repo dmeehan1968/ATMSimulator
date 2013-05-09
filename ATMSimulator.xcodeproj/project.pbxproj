@@ -1,1354 +1,569 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0D9FC19228C04F329388F35E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-ATMSimulatorTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>358A7D3E46CD4EB2A356FF0C</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods-ATMSimulator.a</string>
-			<key>path</key>
-			<string>libPods-ATMSimulator.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>499F20053A8545468C7D6F13</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-		</dict>
-		<key>4D28CD1A5F9C43CC9B1A7194</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ATMSimulator.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods-ATMSimulator.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>79B41A2D48A64DD98E989873</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0D9FC19228C04F329388F35E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>819808E090D14B8A95EDC88B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>1</string>
-		</dict>
-		<key>A34EFE771735BB4A00A86A67</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ATMConsole.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A34EFE781735BB4A00A86A67</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A34EFE771735BB4A00A86A67</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A39F85D11735568200234A55</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ATMControllerSpec.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A39F85D21735568200234A55</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A39F85D11735568200234A55</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A39F85D3173556CB00234A55</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ATMController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A39F85D4173556CB00234A55</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ATMController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A39F85D5173556CB00234A55</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A39F85D4173556CB00234A55</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A39F85D617355CA500234A55</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ATMOperatorSwitch.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3AD1D2F1733C68B002DB4A2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ATMConsole.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E7C17330E8100677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A3DC5E8E17330E8100677077</string>
-				<string>A3DC5EB217330E8200677077</string>
-				<string>A3DC5E8717330E8100677077</string>
-				<string>A3DC5E8617330E8100677077</string>
-				<string>C0756D5852784BBE92C67DE1</string>
-				<string>4D28CD1A5F9C43CC9B1A7194</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E7D17330E8100677077</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>ATM</string>
-				<key>LastUpgradeCheck</key>
-				<string>0460</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Dave Meehan</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>A3DC5E8017330E8100677077</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>A3DC5E7C17330E8100677077</string>
-			<key>productRefGroup</key>
-			<string>A3DC5E8617330E8100677077</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>A3DC5E8417330E8100677077</string>
-				<string>A3DC5EAA17330E8200677077</string>
-			</array>
-		</dict>
-		<key>A3DC5E8017330E8100677077</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A3DC5EBB17330E8200677077</string>
-				<string>A3DC5EBC17330E8200677077</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A3DC5E8117330E8100677077</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A3DC5E9517330E8100677077</string>
-				<string>A3DC5E9917330E8200677077</string>
-				<string>A3DC5EA517330E8200677077</string>
-				<string>A39F85D5173556CB00234A55</string>
-				<string>A3EB786E1735722C0061BE26</string>
-				<string>A34EFE781735BB4A00A86A67</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A3DC5E8217330E8100677077</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A3DC5E8917330E8100677077</string>
-				<string>A3DC5E8B17330E8100677077</string>
-				<string>A3DC5E8D17330E8100677077</string>
-				<string>B835CD42AE0942048ACFECC2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A3DC5E8317330E8100677077</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A3DC5E9317330E8100677077</string>
-				<string>A3DC5E9B17330E8200677077</string>
-				<string>A3DC5E9D17330E8200677077</string>
-				<string>A3DC5E9F17330E8200677077</string>
-				<string>A3DC5EA217330E8200677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A3DC5E8417330E8100677077</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>A3DC5EBD17330E8200677077</string>
-			<key>buildPhases</key>
-			<array>
-				<string>819808E090D14B8A95EDC88B</string>
-				<string>A3DC5E8117330E8100677077</string>
-				<string>A3DC5E8217330E8100677077</string>
-				<string>A3DC5E8317330E8100677077</string>
-				<string>F8CBE98EEBBD4A1CA0D4C6BA</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ATMSimulator</string>
-			<key>productName</key>
-			<string>ATMSimulator</string>
-			<key>productReference</key>
-			<string>A3DC5E8517330E8100677077</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>A3DC5E8517330E8100677077</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ATMSimulator.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A3DC5E8617330E8100677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A3DC5E8517330E8100677077</string>
-				<string>A3DC5EAB17330E8200677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E8717330E8100677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A3DC5E8817330E8100677077</string>
-				<string>A3DC5E8A17330E8100677077</string>
-				<string>A3DC5E8C17330E8100677077</string>
-				<string>A3DC5EAC17330E8200677077</string>
-				<string>0D9FC19228C04F329388F35E</string>
-				<string>358A7D3E46CD4EB2A356FF0C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E8817330E8100677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>A3DC5E8917330E8100677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E8817330E8100677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5E8A17330E8100677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>A3DC5E8B17330E8100677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E8A17330E8100677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5E8C17330E8100677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>A3DC5E8D17330E8100677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E8C17330E8100677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5E8E17330E8100677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A39F85D3173556CB00234A55</string>
-				<string>A39F85D4173556CB00234A55</string>
-				<string>A3AD1D2F1733C68B002DB4A2</string>
-				<string>A34EFE771735BB4A00A86A67</string>
-				<string>A39F85D617355CA500234A55</string>
-				<string>A3EB786D1735722C0061BE26</string>
-				<string>A3DC5E9717330E8200677077</string>
-				<string>A3DC5E9817330E8200677077</string>
-				<string>A3DC5EA017330E8200677077</string>
-				<string>A3DC5EA317330E8200677077</string>
-				<string>A3DC5EA417330E8200677077</string>
-				<string>A3DC5E8F17330E8100677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ATMSimulator</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E8F17330E8100677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A3DC5E9017330E8100677077</string>
-				<string>A3DC5E9117330E8100677077</string>
-				<string>A3DC5E9417330E8100677077</string>
-				<string>A3DC5E9617330E8200677077</string>
-				<string>A3DC5E9A17330E8200677077</string>
-				<string>A3DC5E9C17330E8200677077</string>
-				<string>A3DC5E9E17330E8200677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9017330E8100677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>ATMSimulator-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9117330E8100677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A3DC5E9217330E8100677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9217330E8100677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9317330E8100677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E9117330E8100677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5E9417330E8100677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9517330E8100677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E9417330E8100677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5E9617330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ATMSimulator-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9717330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ATMAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9817330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ATMAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9917330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E9817330E8200677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5E9A17330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9B17330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E9A17330E8200677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5E9C17330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9D17330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E9C17330E8200677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5E9E17330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default-568h@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5E9F17330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E9E17330E8200677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5EA017330E8200677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A3DC5EA117330E8200677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>MainStoryboard.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5EA117330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/MainStoryboard.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5EA217330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5EA017330E8200677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5EA317330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ATMViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5EA417330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ATMViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5EA517330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5EA417330E8200677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5EA617330E8200677077</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A39F85D21735568200234A55</string>
-				<string>A3EB786A17356F920061BE26</string>
-				<string>A3EB786C173571D00061BE26</string>
-				<string>A3EA54641736BFF40008D2DF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A3DC5EA717330E8200677077</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A3DC5EAD17330E8200677077</string>
-				<string>A3DC5EAE17330E8200677077</string>
-				<string>A3DC5EAF17330E8200677077</string>
-				<string>79B41A2D48A64DD98E989873</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A3DC5EA817330E8200677077</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A3DC5EB717330E8200677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A3DC5EA917330E8200677077</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string># Run the unit tests in this test bundle.
-"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests"
-</string>
-		</dict>
-		<key>A3DC5EAA17330E8200677077</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>A3DC5EC017330E8200677077</string>
-			<key>buildPhases</key>
-			<array>
-				<string>499F20053A8545468C7D6F13</string>
-				<string>A3DC5EA617330E8200677077</string>
-				<string>A3DC5EA717330E8200677077</string>
-				<string>A3DC5EA817330E8200677077</string>
-				<string>A3DC5EA917330E8200677077</string>
-				<string>F6B7CF3316D240D08FD288DD</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>A3DC5EB117330E8200677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ATMSimulatorTests</string>
-			<key>productName</key>
-			<string>ATMSimulatorTests</string>
-			<key>productReference</key>
-			<string>A3DC5EAB17330E8200677077</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle</string>
-		</dict>
-		<key>A3DC5EAB17330E8200677077</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ATMSimulatorTests.octest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A3DC5EAC17330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>SenTestingKit.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/SenTestingKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>A3DC5EAD17330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5EAC17330E8200677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5EAE17330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E8817330E8100677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5EAF17330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5E8A17330E8100677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5EB017330E8200677077</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>A3DC5E7D17330E8100677077</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>A3DC5E8417330E8100677077</string>
-			<key>remoteInfo</key>
-			<string>ATMSimulator</string>
-		</dict>
-		<key>A3DC5EB117330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>A3DC5E8417330E8100677077</string>
-			<key>targetProxy</key>
-			<string>A3DC5EB017330E8200677077</string>
-		</dict>
-		<key>A3DC5EB217330E8200677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A3EA54631736BFF40008D2DF</string>
-				<string>A39F85D11735568200234A55</string>
-				<string>A3EB786B173571D00061BE26</string>
-				<string>A3EB786917356F920061BE26</string>
-				<string>A3DC5EB317330E8200677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ATMSimulatorTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5EB317330E8200677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A3DC5EB417330E8200677077</string>
-				<string>A3DC5EB517330E8200677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5EB417330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>ATMSimulatorTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5EB517330E8200677077</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A3DC5EB617330E8200677077</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5EB617330E8200677077</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3DC5EB717330E8200677077</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3DC5EB517330E8200677077</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3DC5EBB17330E8200677077</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A3DC5EBC17330E8200677077</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.1</string>
-				<key>OTHER_CFLAGS</key>
-				<string>-DNS_BLOCK_ASSERTIONS=1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A3DC5EBD17330E8200677077</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A3DC5EBE17330E8200677077</string>
-				<string>A3DC5EBF17330E8200677077</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A3DC5EBE17330E8200677077</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4D28CD1A5F9C43CC9B1A7194</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>ATMSimulator/ATMSimulator-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ATMSimulator/ATMSimulator-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A3DC5EBF17330E8200677077</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4D28CD1A5F9C43CC9B1A7194</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>ATMSimulator/ATMSimulator-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ATMSimulator/ATMSimulator-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A3DC5EC017330E8200677077</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A3DC5EC117330E8200677077</string>
-				<string>A3DC5EC217330E8200677077</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A3DC5EC117330E8200677077</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C0756D5852784BBE92C67DE1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ATMSimulator.app/ATMSimulator</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>ATMSimulator/ATMSimulator-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ATMSimulatorTests/ATMSimulatorTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>octest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A3DC5EC217330E8200677077</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C0756D5852784BBE92C67DE1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ATMSimulator.app/ATMSimulator</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>ATMSimulator/ATMSimulator-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ATMSimulatorTests/ATMSimulatorTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>octest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A3EA54631736BFF40008D2DF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ATMConsoleSpec.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3EA54641736BFF40008D2DF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3EA54631736BFF40008D2DF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3EB786917356F920061BE26</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ATMViewControllerSpec.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3EB786A17356F920061BE26</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3EB786917356F920061BE26</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3EB786B173571D00061BE26</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ATMOperatorSwitchSpec.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3EB786C173571D00061BE26</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3EB786B173571D00061BE26</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3EB786D1735722C0061BE26</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ATMOperatorSwitch.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3EB786E1735722C0061BE26</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A3EB786D1735722C0061BE26</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B835CD42AE0942048ACFECC2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>358A7D3E46CD4EB2A356FF0C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict/>
-		</dict>
-		<key>C0756D5852784BBE92C67DE1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ATMSimulatorTests.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods-ATMSimulatorTests.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>F6B7CF3316D240D08FD288DD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-ATMSimulatorTests-resources.sh"
-</string>
-		</dict>
-		<key>F8CBE98EEBBD4A1CA0D4C6BA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-ATMSimulator-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>1</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>A3DC5E7D17330E8100677077</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79B41A2D48A64DD98E989873 /* libPods-ATMSimulatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */; };
+		A34EFE781735BB4A00A86A67 /* ATMConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A34EFE771735BB4A00A86A67 /* ATMConsole.m */; };
+		A39F85D21735568200234A55 /* ATMControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A39F85D11735568200234A55 /* ATMControllerSpec.m */; };
+		A39F85D5173556CB00234A55 /* ATMController.m in Sources */ = {isa = PBXBuildFile; fileRef = A39F85D4173556CB00234A55 /* ATMController.m */; };
+		A3DC5E8917330E8100677077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8817330E8100677077 /* UIKit.framework */; };
+		A3DC5E8B17330E8100677077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8A17330E8100677077 /* Foundation.framework */; };
+		A3DC5E8D17330E8100677077 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8C17330E8100677077 /* CoreGraphics.framework */; };
+		A3DC5E9317330E8100677077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5E9117330E8100677077 /* InfoPlist.strings */; };
+		A3DC5E9517330E8100677077 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DC5E9417330E8100677077 /* main.m */; };
+		A3DC5E9917330E8200677077 /* ATMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DC5E9817330E8200677077 /* ATMAppDelegate.m */; };
+		A3DC5E9B17330E8200677077 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5E9A17330E8200677077 /* Default.png */; };
+		A3DC5E9D17330E8200677077 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5E9C17330E8200677077 /* Default@2x.png */; };
+		A3DC5E9F17330E8200677077 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5E9E17330E8200677077 /* Default-568h@2x.png */; };
+		A3DC5EA217330E8200677077 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5EA017330E8200677077 /* MainStoryboard.storyboard */; };
+		A3DC5EA517330E8200677077 /* ATMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DC5EA417330E8200677077 /* ATMViewController.m */; };
+		A3DC5EAD17330E8200677077 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5EAC17330E8200677077 /* SenTestingKit.framework */; };
+		A3DC5EAE17330E8200677077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8817330E8100677077 /* UIKit.framework */; };
+		A3DC5EAF17330E8200677077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DC5E8A17330E8100677077 /* Foundation.framework */; };
+		A3DC5EB717330E8200677077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC5EB517330E8200677077 /* InfoPlist.strings */; };
+		A3EA54641736BFF40008D2DF /* ATMConsoleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA54631736BFF40008D2DF /* ATMConsoleSpec.m */; };
+		A3EB786A17356F920061BE26 /* ATMViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EB786917356F920061BE26 /* ATMViewControllerSpec.m */; };
+		A3EB786C173571D00061BE26 /* ATMOperatorSwitchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EB786B173571D00061BE26 /* ATMOperatorSwitchSpec.m */; };
+		A3EB786E1735722C0061BE26 /* ATMOperatorSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EB786D1735722C0061BE26 /* ATMOperatorSwitch.m */; };
+		B835CD42AE0942048ACFECC2 /* libPods-ATMSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 358A7D3E46CD4EB2A356FF0C /* libPods-ATMSimulator.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3DC5EB017330E8200677077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3DC5E7D17330E8100677077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3DC5E8417330E8100677077;
+			remoteInfo = ATMSimulator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ATMSimulatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		358A7D3E46CD4EB2A356FF0C /* libPods-ATMSimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ATMSimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D28CD1A5F9C43CC9B1A7194 /* Pods-ATMSimulator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMSimulator.xcconfig"; path = "Pods/Pods-ATMSimulator.xcconfig"; sourceTree = SOURCE_ROOT; };
+		A34EFE771735BB4A00A86A67 /* ATMConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMConsole.m; sourceTree = "<group>"; };
+		A398D839173BD4850079FD3E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file; path = README.md; sourceTree = "<group>"; };
+		A39F85D11735568200234A55 /* ATMControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMControllerSpec.m; sourceTree = "<group>"; };
+		A39F85D3173556CB00234A55 /* ATMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMController.h; sourceTree = "<group>"; };
+		A39F85D4173556CB00234A55 /* ATMController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMController.m; sourceTree = "<group>"; };
+		A39F85D617355CA500234A55 /* ATMOperatorSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMOperatorSwitch.h; sourceTree = "<group>"; };
+		A3AD1D2F1733C68B002DB4A2 /* ATMConsole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMConsole.h; sourceTree = "<group>"; };
+		A3DC5E8517330E8100677077 /* ATMSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DC5E8817330E8100677077 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A3DC5E8A17330E8100677077 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3DC5E8C17330E8100677077 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A3DC5E9017330E8100677077 /* ATMSimulator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATMSimulator-Info.plist"; sourceTree = "<group>"; };
+		A3DC5E9217330E8100677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3DC5E9417330E8100677077 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3DC5E9617330E8200677077 /* ATMSimulator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ATMSimulator-Prefix.pch"; sourceTree = "<group>"; };
+		A3DC5E9717330E8200677077 /* ATMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMAppDelegate.h; sourceTree = "<group>"; };
+		A3DC5E9817330E8200677077 /* ATMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMAppDelegate.m; sourceTree = "<group>"; };
+		A3DC5E9A17330E8200677077 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A3DC5E9C17330E8200677077 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A3DC5E9E17330E8200677077 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A3DC5EA117330E8200677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A3DC5EA317330E8200677077 /* ATMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMViewController.h; sourceTree = "<group>"; };
+		A3DC5EA417330E8200677077 /* ATMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMViewController.m; sourceTree = "<group>"; };
+		A3DC5EAB17330E8200677077 /* ATMSimulatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATMSimulatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DC5EAC17330E8200677077 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A3DC5EB417330E8200677077 /* ATMSimulatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATMSimulatorTests-Info.plist"; sourceTree = "<group>"; };
+		A3DC5EB617330E8200677077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3EA54631736BFF40008D2DF /* ATMConsoleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMConsoleSpec.m; sourceTree = "<group>"; };
+		A3EB786917356F920061BE26 /* ATMViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMViewControllerSpec.m; sourceTree = "<group>"; };
+		A3EB786B173571D00061BE26 /* ATMOperatorSwitchSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMOperatorSwitchSpec.m; sourceTree = "<group>"; };
+		A3EB786D1735722C0061BE26 /* ATMOperatorSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMOperatorSwitch.m; sourceTree = "<group>"; };
+		C0756D5852784BBE92C67DE1 /* Pods-ATMSimulatorTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMSimulatorTests.xcconfig"; path = "Pods/Pods-ATMSimulatorTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3DC5E8217330E8100677077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5E8917330E8100677077 /* UIKit.framework in Frameworks */,
+				A3DC5E8B17330E8100677077 /* Foundation.framework in Frameworks */,
+				A3DC5E8D17330E8100677077 /* CoreGraphics.framework in Frameworks */,
+				B835CD42AE0942048ACFECC2 /* libPods-ATMSimulator.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DC5EA717330E8200677077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5EAD17330E8200677077 /* SenTestingKit.framework in Frameworks */,
+				A3DC5EAE17330E8200677077 /* UIKit.framework in Frameworks */,
+				A3DC5EAF17330E8200677077 /* Foundation.framework in Frameworks */,
+				79B41A2D48A64DD98E989873 /* libPods-ATMSimulatorTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3DC5E7C17330E8100677077 = {
+			isa = PBXGroup;
+			children = (
+				A398D839173BD4850079FD3E /* README.md */,
+				A3DC5E8E17330E8100677077 /* ATMSimulator */,
+				A3DC5EB217330E8200677077 /* ATMSimulatorTests */,
+				A3DC5E8717330E8100677077 /* Frameworks */,
+				A3DC5E8617330E8100677077 /* Products */,
+				C0756D5852784BBE92C67DE1 /* Pods-ATMSimulatorTests.xcconfig */,
+				4D28CD1A5F9C43CC9B1A7194 /* Pods-ATMSimulator.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A3DC5E8617330E8100677077 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5E8517330E8100677077 /* ATMSimulator.app */,
+				A3DC5EAB17330E8200677077 /* ATMSimulatorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3DC5E8717330E8100677077 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5E8817330E8100677077 /* UIKit.framework */,
+				A3DC5E8A17330E8100677077 /* Foundation.framework */,
+				A3DC5E8C17330E8100677077 /* CoreGraphics.framework */,
+				A3DC5EAC17330E8200677077 /* SenTestingKit.framework */,
+				0D9FC19228C04F329388F35E /* libPods-ATMSimulatorTests.a */,
+				358A7D3E46CD4EB2A356FF0C /* libPods-ATMSimulator.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3DC5E8E17330E8100677077 /* ATMSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				A39F85D3173556CB00234A55 /* ATMController.h */,
+				A39F85D4173556CB00234A55 /* ATMController.m */,
+				A3AD1D2F1733C68B002DB4A2 /* ATMConsole.h */,
+				A34EFE771735BB4A00A86A67 /* ATMConsole.m */,
+				A39F85D617355CA500234A55 /* ATMOperatorSwitch.h */,
+				A3EB786D1735722C0061BE26 /* ATMOperatorSwitch.m */,
+				A3DC5E9717330E8200677077 /* ATMAppDelegate.h */,
+				A3DC5E9817330E8200677077 /* ATMAppDelegate.m */,
+				A3DC5EA017330E8200677077 /* MainStoryboard.storyboard */,
+				A3DC5EA317330E8200677077 /* ATMViewController.h */,
+				A3DC5EA417330E8200677077 /* ATMViewController.m */,
+				A3DC5E8F17330E8100677077 /* Supporting Files */,
+			);
+			path = ATMSimulator;
+			sourceTree = "<group>";
+		};
+		A3DC5E8F17330E8100677077 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5E9017330E8100677077 /* ATMSimulator-Info.plist */,
+				A3DC5E9117330E8100677077 /* InfoPlist.strings */,
+				A3DC5E9417330E8100677077 /* main.m */,
+				A3DC5E9617330E8200677077 /* ATMSimulator-Prefix.pch */,
+				A3DC5E9A17330E8200677077 /* Default.png */,
+				A3DC5E9C17330E8200677077 /* Default@2x.png */,
+				A3DC5E9E17330E8200677077 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3DC5EB217330E8200677077 /* ATMSimulatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3EA54631736BFF40008D2DF /* ATMConsoleSpec.m */,
+				A39F85D11735568200234A55 /* ATMControllerSpec.m */,
+				A3EB786B173571D00061BE26 /* ATMOperatorSwitchSpec.m */,
+				A3EB786917356F920061BE26 /* ATMViewControllerSpec.m */,
+				A3DC5EB317330E8200677077 /* Supporting Files */,
+			);
+			path = ATMSimulatorTests;
+			sourceTree = "<group>";
+		};
+		A3DC5EB317330E8200677077 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC5EB417330E8200677077 /* ATMSimulatorTests-Info.plist */,
+				A3DC5EB517330E8200677077 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3DC5E8417330E8100677077 /* ATMSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DC5EBD17330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulator" */;
+			buildPhases = (
+				819808E090D14B8A95EDC88B /* Check Pods Manifest.lock */,
+				A3DC5E8117330E8100677077 /* Sources */,
+				A3DC5E8217330E8100677077 /* Frameworks */,
+				A3DC5E8317330E8100677077 /* Resources */,
+				F8CBE98EEBBD4A1CA0D4C6BA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATMSimulator;
+			productName = ATMSimulator;
+			productReference = A3DC5E8517330E8100677077 /* ATMSimulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3DC5EAA17330E8200677077 /* ATMSimulatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DC5EC017330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulatorTests" */;
+			buildPhases = (
+				499F20053A8545468C7D6F13 /* Check Pods Manifest.lock */,
+				A3DC5EA617330E8200677077 /* Sources */,
+				A3DC5EA717330E8200677077 /* Frameworks */,
+				A3DC5EA817330E8200677077 /* Resources */,
+				A3DC5EA917330E8200677077 /* ShellScript */,
+				F6B7CF3316D240D08FD288DD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3DC5EB117330E8200677077 /* PBXTargetDependency */,
+			);
+			name = ATMSimulatorTests;
+			productName = ATMSimulatorTests;
+			productReference = A3DC5EAB17330E8200677077 /* ATMSimulatorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3DC5E7D17330E8100677077 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ATM;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Dave Meehan";
+			};
+			buildConfigurationList = A3DC5E8017330E8100677077 /* Build configuration list for PBXProject "ATMSimulator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3DC5E7C17330E8100677077;
+			productRefGroup = A3DC5E8617330E8100677077 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3DC5E8417330E8100677077 /* ATMSimulator */,
+				A3DC5EAA17330E8200677077 /* ATMSimulatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3DC5E8317330E8100677077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5E9317330E8100677077 /* InfoPlist.strings in Resources */,
+				A3DC5E9B17330E8200677077 /* Default.png in Resources */,
+				A3DC5E9D17330E8200677077 /* Default@2x.png in Resources */,
+				A3DC5E9F17330E8200677077 /* Default-568h@2x.png in Resources */,
+				A3DC5EA217330E8200677077 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DC5EA817330E8200677077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5EB717330E8200677077 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		499F20053A8545468C7D6F13 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		819808E090D14B8A95EDC88B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		A3DC5EA917330E8200677077 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		F6B7CF3316D240D08FD288DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ATMSimulatorTests-resources.sh\"\n";
+		};
+		F8CBE98EEBBD4A1CA0D4C6BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ATMSimulator-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3DC5E8117330E8100677077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DC5E9517330E8100677077 /* main.m in Sources */,
+				A3DC5E9917330E8200677077 /* ATMAppDelegate.m in Sources */,
+				A3DC5EA517330E8200677077 /* ATMViewController.m in Sources */,
+				A39F85D5173556CB00234A55 /* ATMController.m in Sources */,
+				A3EB786E1735722C0061BE26 /* ATMOperatorSwitch.m in Sources */,
+				A34EFE781735BB4A00A86A67 /* ATMConsole.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DC5EA617330E8200677077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A39F85D21735568200234A55 /* ATMControllerSpec.m in Sources */,
+				A3EB786A17356F920061BE26 /* ATMViewControllerSpec.m in Sources */,
+				A3EB786C173571D00061BE26 /* ATMOperatorSwitchSpec.m in Sources */,
+				A3EA54641736BFF40008D2DF /* ATMConsoleSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3DC5EB117330E8200677077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3DC5E8417330E8100677077 /* ATMSimulator */;
+			targetProxy = A3DC5EB017330E8200677077 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3DC5E9117330E8100677077 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DC5E9217330E8100677077 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A3DC5EA017330E8200677077 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DC5EA117330E8200677077 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		A3DC5EB517330E8200677077 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DC5EB617330E8200677077 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3DC5EBB17330E8200677077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A3DC5EBC17330E8200677077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3DC5EBE17330E8200677077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D28CD1A5F9C43CC9B1A7194 /* Pods-ATMSimulator.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
+				INFOPLIST_FILE = "ATMSimulator/ATMSimulator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A3DC5EBF17330E8200677077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D28CD1A5F9C43CC9B1A7194 /* Pods-ATMSimulator.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
+				INFOPLIST_FILE = "ATMSimulator/ATMSimulator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A3DC5EC117330E8200677077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0756D5852784BBE92C67DE1 /* Pods-ATMSimulatorTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ATMSimulator.app/ATMSimulator";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
+				INFOPLIST_FILE = "ATMSimulatorTests/ATMSimulatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A3DC5EC217330E8200677077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0756D5852784BBE92C67DE1 /* Pods-ATMSimulatorTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ATMSimulator.app/ATMSimulator";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ATMSimulator/ATMSimulator-Prefix.pch";
+				INFOPLIST_FILE = "ATMSimulatorTests/ATMSimulatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3DC5E8017330E8100677077 /* Build configuration list for PBXProject "ATMSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DC5EBB17330E8200677077 /* Debug */,
+				A3DC5EBC17330E8200677077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3DC5EBD17330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DC5EBE17330E8200677077 /* Debug */,
+				A3DC5EBF17330E8200677077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3DC5EC017330E8200677077 /* Build configuration list for PBXNativeTarget "ATMSimulatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DC5EC117330E8200677077 /* Debug */,
+				A3DC5EC217330E8200677077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3DC5E7D17330E8100677077 /* Project object */;
+}
