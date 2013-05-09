@@ -30,19 +30,17 @@ describe(@"ATM Controller", ^{
 		
 		it(@"should not have a console at startup", ^{
 			
-			[(id)sut.console shouldBeNil];
+			[sut.console shouldBeNil];
 			
 		});
 		
-		it(@"sets 'not available' on startup", ^{
+		it(@"sets 'not available' when console assigned", ^{
 			
 			console = [KWMock mockForProtocol:@protocol(ATMConsole)];
 			
 			[[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
 			
 			sut.console = console;
-			
-			[[(id)sut.console should] equal:console];
 			
 		});
 
@@ -52,18 +50,17 @@ describe(@"ATM Controller", ^{
 		
 		it(@"should not have a keyswitch on startup", ^{
 			
-			[(id)sut.operatorSwitch shouldBeNil];
+			[sut.operatorSwitch shouldBeNil];
 			
 		});
 		
         it(@"should send initial message to console when operator switch assigned", ^{
         
             operatorSwitch = [KWMock mockForProtocol:@protocol(ATMOperatorSwitch)];
-            
-            [[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
-        
-            sut.console = console;
+
             sut.operatorSwitch = operatorSwitch;
+			
+			[[sut.operatorSwitch should] equal:operatorSwitch];
             
         });
         		
