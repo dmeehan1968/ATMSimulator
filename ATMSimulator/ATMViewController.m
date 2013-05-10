@@ -19,6 +19,7 @@
 
 	[self setupAtmController];
 	[self sortButtons];
+	[self hideButtons];
 	
 }
 
@@ -52,6 +53,15 @@
 		}
 		
 		return button1.tag < button2.tag ? NSOrderedAscending : NSOrderedDescending;
+	}];
+	
+}
+
+-(void)hideButtons {
+	
+	[self.buttonCollection enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
+		
+		button.hidden = YES;
 	}];
 	
 }
