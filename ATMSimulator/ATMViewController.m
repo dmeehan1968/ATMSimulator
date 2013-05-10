@@ -18,6 +18,7 @@
 -(void)viewDidLoad {
 
 	[self setupAtmController];
+	[self sortButtons];
 	
 }
 
@@ -37,6 +38,21 @@
 	self.atmController = [ATMController new];
 	self.atmController.console = self.console = [ATMConsole new];
 	self.atmController.operatorSwitch = self.operatorSwitch = [ATMOperatorSwitch new];
+	
+}
+
+#pragma mark - Buttons
+
+-(void) sortButtons {
+
+	self.buttonCollection = [self.buttonCollection sortedArrayUsingComparator:^NSComparisonResult(UIButton *button1, UIButton *button2) {
+		
+		if (button1.tag == button2.tag) {
+			return NSOrderedSame;
+		}
+		
+		return button1.tag < button2.tag ? NSOrderedAscending : NSOrderedDescending;
+	}];
 	
 }
 
