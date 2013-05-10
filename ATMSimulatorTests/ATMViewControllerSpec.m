@@ -126,11 +126,13 @@ describe(@"ATMViewController", ^{
 				
 		});
 		
-		it(@"should have buttons ordered by tag", ^{
+		it(@"should have buttons ordered by tag, but hidden by default", ^{
 			
 			[sut.buttonCollection enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
 				
 				[[theValue(button.tag) should] equal: theValue(idx)];
+				
+				[[theValue(button.hidden) should] beYes];
 				
 			}];
 			
