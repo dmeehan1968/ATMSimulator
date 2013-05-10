@@ -123,13 +123,19 @@ describe(@"ATMViewController", ^{
 		it(@"should have a button collection with 8 buttons", ^{
 			
 			[[sut.buttonCollection should] haveCountOf:8];
+				
+		});
+		
+		it(@"should have buttons ordered by tag", ^{
+			
+			[sut.buttonCollection enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
+				
+				[[theValue(button.tag) should] equal: theValue(idx)];
+				
+			}];
 			
 		});
 
-
-		
-
-		
 	});
 
     
