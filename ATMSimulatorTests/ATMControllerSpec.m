@@ -73,7 +73,14 @@ describe(@"ATM Controller", ^{
 			operatorSwitch.state = YES;
 			
 		});
-
+		
+		it(@"should display 'not available' when operator switch moved to OFF", ^{
+			
+			[[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
+			
+			operatorSwitch.state = NO;
+			
+		});
         
 	});
 
