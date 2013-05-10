@@ -125,6 +125,13 @@ describe(@"ATMViewController", ^{
 			[[sut.labelCollection should] haveCountOf:8];
 			
 		});
+		
+		it(@"should have a button collection with 8 buttons", ^{
+			
+			[[sut.buttonCollection should] haveCountOf:8];
+			
+		});
+
 
 		
 
