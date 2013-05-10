@@ -20,6 +20,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *messageUI;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonCollection;
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *labelCollection;
 
 @end
