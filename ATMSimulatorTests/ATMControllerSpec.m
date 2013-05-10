@@ -83,6 +83,21 @@ describe(@"ATM Controller", ^{
 		});
         
 	});
+	
+	context(@"Enter Cash Balance", ^{
+		
+		beforeAll(^{
+			operatorSwitch.state = YES;
+		});
+		
+		xit(@"should receive initial cash balance", ^{
+			
+			// TODO
+			
+		});
+
+		
+	});
 
 });
 
