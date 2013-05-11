@@ -137,9 +137,37 @@ describe(@"ATMViewController", ^{
 			}];
 			
 		});
-
+		
 	});
-
+	
+	context(@"Entering Cash Balance", ^{
+		
+		beforeEach(^{
+			
+			sut.operatorSwitch.state = YES;
+			
+		});
+		
+		it(@"button text should match console input options", ^{
+						
+			[sut.buttonCollection enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
+				
+				if (idx < sut.console.inputOptions.count) {
+					
+					[[button.currentTitle should] equal: sut.console.inputOptions[idx]];
+					[[theValue(button.hidden) should] beNo];
+					
+				} else {
+					
+					[[theValue(button.hidden) should] beYes];
+					
+				}
+				
+			}];
+			
+		});
+		
+	});
     
 });
 
