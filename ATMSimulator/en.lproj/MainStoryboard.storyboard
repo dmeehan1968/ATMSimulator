@@ -15,7 +15,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0E7-h0-u2E"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LP8-mR-lko">
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-Vs-ZVk">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="457" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-Vs-ZVk">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="402" id="sYO-QY-y4q"/>
                                         </constraints>
@@ -186,6 +186,19 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="ATMViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ATMViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="messageUI" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="operatorSwitchUI" candidateClass="UISwitch"/>
+                <relationship kind="outletCollection" name="buttonCollection" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
