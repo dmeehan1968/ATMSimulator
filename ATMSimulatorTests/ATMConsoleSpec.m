@@ -58,6 +58,21 @@ describe(@"ATMConsole", ^{
 		}) should] raiseWithName:@"NSInternalInconsistencyException"];
         
     });
+	
+	it(@"should track input option when selected", ^{
+		
+        sut.inputOptions = @[ @"Option 1", @"Option 2" ];
+		
+		[sut didSelectInputOption:0];
+		
+		[[theValue(sut.lastInputReceived) should] equal: theValue(0)];
+		
+		[sut didSelectInputOption:1];
+		
+		[[theValue(sut.lastInputReceived) should] equal: theValue(1)];
+        
+    });
+
 
 
 
