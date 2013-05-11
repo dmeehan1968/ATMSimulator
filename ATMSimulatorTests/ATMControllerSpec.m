@@ -97,7 +97,7 @@ describe(@"ATM Controller", ^{
 			
 		});
 		
-		it(@"should have cash balance of 43210 with simulated input", ^{
+		xit(@"should have cash balance of 43210 with simulated input", ^{
 			
 			[console didSelectInputOption:0];	// 10,000
 			[console didSelectInputOption:0];	// 10,000
@@ -119,15 +119,6 @@ describe(@"ATM Controller", ^{
 			
 		});
 
-
-		
-		xit(@"should receive initial cash balance", ^{
-			
-			// TODO
-			
-		});
-
-		
 	});
 
 });
