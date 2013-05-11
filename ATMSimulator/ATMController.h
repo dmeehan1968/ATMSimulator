@@ -18,4 +18,6 @@ extern NSString * const ATMControllerMessageEnterCashBalance;
 @property (weak, nonatomic) NSObject<ATMConsole> *console;
 @property (weak, nonatomic) NSObject<ATMOperatorSwitch> *operatorSwitch;
 
+@property (assign, nonatomic) NSInteger cashBalance;
+
 @end

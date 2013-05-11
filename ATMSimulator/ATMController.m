@@ -30,7 +30,7 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 		if (self.operatorSwitch.state) {
 			
 			self.console.message = ATMControllerMessageEnterCashBalance;
-			self.console.inputOptions = @[ @"10,000", @"1,000", @"100", @"10" ];
+			self.console.inputOptions = @[ @"10,000", @"1,000", @"100", @"10", @"Done" ];
 			
 		} else {
 			
