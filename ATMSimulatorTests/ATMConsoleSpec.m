@@ -29,6 +29,12 @@ describe(@"ATMConsole", ^{
         sut.message = @"Test Message";
         
     });
+	
+	it(@"should have a collection for input options", ^{
+		
+        [sut.inputOptions shouldNotBeNil];
+        
+    });
 
 });
 
