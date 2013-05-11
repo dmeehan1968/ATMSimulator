@@ -11,15 +11,20 @@ describe(@"ATM Controller", ^{
     __block ATMConsole *console;
 	__block ATMOperatorSwitch *operatorSwitch;
 	
-    beforeAll(^{
+    beforeEach(^{
 		
         sut = [[ATMController alloc] init];
+		console = [ATMConsole new];
+		operatorSwitch = [ATMOperatorSwitch new];
         
     });
     
-    afterAll(^{
+    afterEach(^{
         
         sut = nil;
+		console = nil;
+		operatorSwitch = nil;
+		
     });
     
     it(@"should exist", ^{
@@ -28,97 +33,146 @@ describe(@"ATM Controller", ^{
         
     });
 	
-	context(@"Console", ^{
-		
+	context(@"ATM State Transitions", ^{
+
 		it(@"should not have a console at startup", ^{
 			
 			[sut.console shouldBeNil];
 			
 		});
 		
-		it(@"sets 'not available' when console assigned", ^{
+		context(@"Assigning Console", ^{
+
+			beforeEach(^{
+				
+				sut.console = console;
+				
+			});
 			
-			console = [ATMConsole new];
+
+			it(@"should allow a console to be assigned", ^{
 			
-			[[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
+				[[sut.console should] equal: console];
 			
-			sut.console = console;
+			});
 			
+			it(@"should assign 'not available' console message", ^{
+				
+				[[sut.console.message should] equal: ATMControllerMessageNotAvailable];
+				
+			});
+
 		});
 
-	});
-
-	context(@"Operator Switch", ^{
-		
-		it(@"should not have a keyswitch on startup", ^{
+		it(@"should not have an operator switch on startup", ^{
 			
 			[sut.operatorSwitch shouldBeNil];
 			
 		});
 		
-        it(@"should be able to assign operator switch", ^{
-        
-            operatorSwitch = [ATMOperatorSwitch new];
+		context(@"Assigning Operator Switch", ^{
 
-            sut.operatorSwitch = operatorSwitch;
-			
-			[[sut.operatorSwitch should] equal:operatorSwitch];
-            
-        });
+			beforeEach(^{
+				
+				sut.operatorSwitch = operatorSwitch;
+				
+			});
 		
-		it(@"should display 'enter cash balance' when operator switch moved to ON", ^{
-			
-			[[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageEnterCashBalance];
-			
-			operatorSwitch.state = YES;
+			it(@"should be able to assign operator switch", ^{
+				
+				[[sut.operatorSwitch should] equal:operatorSwitch];
+				
+			});
 			
 		});
 		
-		it(@"should display 'not available' when operator switch moved to OFF", ^{
+		context(@"Switching Operator Switch ON", ^{
+
+			beforeEach(^{
+				
+				sut.console = console;
+				sut.operatorSwitch = operatorSwitch;				
+				sut.operatorSwitch.state = YES;
+				
+			});
 			
-			[[console should] receive:@selector(setMessage:) withArguments:ATMControllerMessageNotAvailable];
+
+			it(@"should set message to request cash balance", ^{
+				
+				[[sut.console.message should] equal: ATMControllerMessageEnterCashBalance];
+				
+			});
 			
-			operatorSwitch.state = NO;
+			it(@"should have 5 input options for cash balance entry", ^{
+				
+				[[sut.console.inputOptions should] haveCountOf:5];
+				
+			});
+			
+			it(@"should have input options for each power of 10 cash amount, plus done button", ^{
+				
+				[[sut.console.inputOptions should] containObjects:@"10,000", @"1,000", @"100", @"10", @"Done", nil];
+				
+			});
+
+			context(@"Switching Operator Switch OFF", ^{
+				
+				beforeEach(^{
+					
+					sut.operatorSwitch.state = NO;
+					
+				});
+				
+				it(@"should change console message to 'not available'", ^{
+					
+					[[sut.console.message should] equal:ATMControllerMessageNotAvailable];
+					
+				});
+
+				it(@"should remove input options", ^{
+					
+					[[sut.console.inputOptions should] haveCountOf:0];
+					
+				});
+
+			});
+			
+			context(@"Entry of Cash Balance", ^{
+				
+				xit(@"should have cash balance of 43210 with simulated input", ^{
+					
+					[console didSelectInputOption:0];	// 10,000
+					[console didSelectInputOption:0];	// 10,000
+					[console didSelectInputOption:0];	// 10,000
+					[console didSelectInputOption:0];	// 10,000
+					
+					[console didSelectInputOption:1];	// 1,000
+					[console didSelectInputOption:1];	// 1,000
+					[console didSelectInputOption:1];	// 1,000
+					
+					[console didSelectInputOption:2];	// 100
+					[console didSelectInputOption:2];	// 100
+					
+					[console didSelectInputOption:3];	// 10
+					
+					[console didSelectInputOption:4];	// Done
+					
+					[[theValue(sut.cashBalance) should] equal: theValue(43210)];
+					
+				});
+
+				
+			});
+			
+
 			
 		});
-        
-	});
+		
+
 	
-	context(@"Enter Cash Balance", ^{
-		
-		beforeAll(^{
-			operatorSwitch.state = YES;
-		});
-		
-		it(@"should assign input options to console", ^{
-			
-			[[console.inputOptions should] haveCountOf:5];
-			[[console.inputOptions should] containObjects:@"10,000", @"1,000", @"100", @"10", @"Done", nil];
-			
-		});
-		
-		xit(@"should have cash balance of 43210 with simulated input", ^{
-			
-			[console didSelectInputOption:0];	// 10,000
-			[console didSelectInputOption:0];	// 10,000
-			[console didSelectInputOption:0];	// 10,000
-			[console didSelectInputOption:0];	// 10,000
-
-			[console didSelectInputOption:1];	// 1,000
-			[console didSelectInputOption:1];	// 1,000
-			[console didSelectInputOption:1];	// 1,000
-
-			[console didSelectInputOption:2];	// 100
-			[console didSelectInputOption:2];	// 100
-
-			[console didSelectInputOption:3];	// 10
-
-			[console didSelectInputOption:4];	// Done
-			
-			[[theValue(sut.cashBalance) should] equal: theValue(43210)];
-			
-		});
-
+	
+	
+	
 	});
 
 });
