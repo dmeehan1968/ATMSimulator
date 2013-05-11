@@ -14,15 +14,33 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 
 @implementation ATMController
 
+-(void)resetATM {
+	
+	self.operatorSwitch.state = NO;
+	self.console.message = ATMControllerMessageNotAvailable;
+	self.console.inputOptions = @[];
+	
+}
+
 -(void)setConsole:(id<ATMConsole>)console {
+
+	if (_console == console) {
+		return;
+	}
 	
 	_console = console;
 	
-	[_console setMessage:ATMControllerMessageNotAvailable];
+	[self resetATM];
 }
 
 -(void)setOperatorSwitch:(id<ATMOperatorSwitch>)operatorSwitch {
 
+	if (_operatorSwitch == operatorSwitch) {
+		return;
+	}
+	
+	[_operatorSwitch removeObserver:self keyPath:@"state"];
+	
     _operatorSwitch = operatorSwitch;
     
 	[_operatorSwitch addObserver:self keyPath:@"state" options:0 block:^(MAKVONotification *notification) {
@@ -34,11 +52,19 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 			
 		} else {
 			
-			self.console.message = ATMControllerMessageNotAvailable;
-			self.console.inputOptions = @[];
+			// Need to guard against recursion.
+			static BOOL inReset = NO;
+
+			if (! inReset) {
+				inReset = YES;
+				[self resetATM];
+				inReset = NO;
+			}
 			
 		}
 	}];
+	
+	[self resetATM];
 }
 
 @end
