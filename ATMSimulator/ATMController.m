@@ -27,8 +27,17 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
     
 	[_operatorSwitch addObserver:self keyPath:@"state" options:0 block:^(MAKVONotification *notification) {
 		
-		[self.console setMessage: self.operatorSwitch.state ? ATMControllerMessageEnterCashBalance : ATMControllerMessageNotAvailable];
-		
+		if (self.operatorSwitch.state) {
+			
+			self.console.message = ATMControllerMessageEnterCashBalance;
+			self.console.inputOptions = @[ @"10,000", @"1,000", @"100", @"10" ];
+			
+		} else {
+			
+			self.console.message = ATMControllerMessageNotAvailable;
+			self.console.inputOptions = @[];
+			
+		}
 	}];
 }
 
