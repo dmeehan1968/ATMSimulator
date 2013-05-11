@@ -66,6 +66,30 @@
 	
 }
 
+-(void)configureButtonsToMatchInputOptions {
+	
+	[self.buttonCollection enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
+		
+		if (idx < self.console.inputOptions.count) {
+			
+			[button setTitle: self.console.inputOptions[idx] forState:UIControlStateNormal];
+			button.hidden = NO;
+			[button touchUpInside:^(UIEvent *event) {
+				
+				[self.console didSelectInputOption: idx];
+				
+			}];
+			
+		} else {
+			
+			button.hidden = YES;
+			[button removeBlocksForControlEvents:UIControlEventTouchUpInside];
+		}
+		
+	}];
+	
+}
+
 #pragma mark - Operator Switch
 
 -(void)setupOperatorSwitch {
@@ -101,20 +125,8 @@
 
 	[self.console addObservationKeyPath:@"inputOptions" options:0 block:^(MAKVONotification *notification) {
 	
-		[weakSelf.buttonCollection enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
-			
-			if (idx < weakSelf.console.inputOptions.count) {
-				
-				[button setTitle: weakSelf.console.inputOptions[idx] forState:UIControlStateNormal];
-				button.hidden = NO;
-				
-			} else {
-				
-				button.hidden = YES;
-			}
-			
-		}];
-		
+		[weakSelf configureButtonsToMatchInputOptions];
+
 	}];
 	
 	self.console.message = self.console.message;
