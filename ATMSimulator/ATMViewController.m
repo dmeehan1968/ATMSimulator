@@ -99,6 +99,24 @@
 		
 	}];
 
+	[self.console addObservationKeyPath:@"inputOptions" options:0 block:^(MAKVONotification *notification) {
+	
+		[weakSelf.buttonCollection enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
+			
+			if (idx < weakSelf.console.inputOptions.count) {
+				
+				[button setTitle: weakSelf.console.inputOptions[idx] forState:UIControlStateNormal];
+				button.hidden = NO;
+				
+			} else {
+				
+				button.hidden = YES;
+			}
+			
+		}];
+		
+	}];
+	
 	self.console.message = self.console.message;
 	
 }
