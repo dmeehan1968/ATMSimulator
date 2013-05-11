@@ -90,6 +90,14 @@ describe(@"ATM Controller", ^{
 			operatorSwitch.state = YES;
 		});
 		
+		it(@"should assign input options to console", ^{
+			
+			[[console.inputOptions should] haveCountOf:4];
+			[[console.inputOptions should] containObjects:@"10,000", @"1,000", @"100", @"10", nil];
+			
+		});
+
+		
 		xit(@"should receive initial cash balance", ^{
 			
 			// TODO
