@@ -36,6 +36,13 @@ describe(@"ATMConsole", ^{
         
     });
 
+	it(@"should have no input options by default", ^{
+		
+        [[sut.inputOptions should] haveCountOf:0];
+        
+    });
+
+
 });
 
 SPEC_END
