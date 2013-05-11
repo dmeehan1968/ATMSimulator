@@ -42,6 +42,16 @@ describe(@"ATMConsole", ^{
         
     });
 	
+	it(@"should have valid input options collection when nil assigned", ^{
+		
+        sut.inputOptions = nil;
+		
+		[sut.inputOptions shouldNotBeNil];
+		[[sut.inputOptions should] haveCountOf:0];
+        
+    });
+
+	
 	it(@"should have last input received set to not found be default", ^{
 		
         [[theValue(sut.lastInputReceived) should] equal:theValue(NSNotFound)];
