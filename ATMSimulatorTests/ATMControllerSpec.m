@@ -99,19 +99,19 @@ describe(@"ATM Controller", ^{
 
 			it(@"should set message to request cash balance", ^{
 				
-				[[sut.console.message should] equal: ATMControllerMessageEnterCashBalance];
+				[[console.message should] equal: ATMControllerMessageEnterCashBalance];
 				
 			});
 			
 			it(@"should have 5 input options for cash balance entry", ^{
 				
-				[[sut.console.inputOptions should] haveCountOf:5];
+				[[console.inputOptions should] haveCountOf:5];
 				
 			});
 			
 			it(@"should have input options for each power of 10 cash amount, plus done button", ^{
 				
-				[[sut.console.inputOptions should] containObjects:@"10,000", @"1,000", @"100", @"10", @"Done", nil];
+				[[console.inputOptions should] containObjects:@"10,000", @"1,000", @"100", @"10", @"Done", nil];
 				
 			});
 
@@ -119,19 +119,19 @@ describe(@"ATM Controller", ^{
 				
 				beforeEach(^{
 					
-					sut.operatorSwitch.state = NO;
+					operatorSwitch.state = NO;
 					
 				});
 				
 				it(@"should change console message to 'not available'", ^{
 					
-					[[sut.console.message should] equal:ATMControllerMessageNotAvailable];
+					[[console.message should] equal:ATMControllerMessageNotAvailable];
 					
 				});
 
 				it(@"should remove input options", ^{
 					
-					[[sut.console.inputOptions should] haveCountOf:0];
+					[[console.inputOptions should] haveCountOf:0];
 					
 				});
 
@@ -139,6 +139,28 @@ describe(@"ATM Controller", ^{
 			
 			context(@"Entry of Cash Balance", ^{
 				
+				it(@"should allow operator switch to move to OFF", ^{
+					
+					operatorSwitch.state = NO;
+					
+					[[console.message should] equal:ATMControllerMessageNotAvailable];
+					
+				});
+				
+				it(@"should have zero cash balance before input", ^{
+					
+					[[theValue(sut.cashBalance) should] equal: theValue(0)];
+					
+				});
+
+				it(@"should not allow done to be selected with zero balance", ^{
+					
+					[console didSelectInputOption:4];	// Done
+					
+					[[console.message should] equal:ATMControllerMessageEnterCashBalance];
+					
+				});
+
 				xit(@"should have cash balance of 43210 with simulated input", ^{
 					
 					[console didSelectInputOption:0];	// 10,000
