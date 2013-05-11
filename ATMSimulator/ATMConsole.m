@@ -27,4 +27,14 @@
 	
 }
 
+-(void)setInputOptions:(NSArray *)inputOptions {
+	
+	if (inputOptions == nil) {
+		inputOptions = @[];
+	}
+	
+	_inputOptions = inputOptions;
+	
+}
+
 @end
