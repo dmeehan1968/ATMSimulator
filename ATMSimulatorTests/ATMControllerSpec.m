@@ -161,6 +161,16 @@ describe(@"ATM Controller", ^{
 					
 				});
 
+				it(@"should allow input 0 to be selected and message should include 10,000", ^{
+					
+					[console didSelectInputOption:0];	// 10,000
+					
+					[[console.message should] contain:@"10,000"];
+					
+				});
+
+				
+				
 				xit(@"should have cash balance of 43210 with simulated input", ^{
 					
 					[console didSelectInputOption:0];	// 10,000
