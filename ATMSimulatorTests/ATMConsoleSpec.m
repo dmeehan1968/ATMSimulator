@@ -41,6 +41,24 @@ describe(@"ATMConsole", ^{
         [[sut.inputOptions should] haveCountOf:0];
         
     });
+	
+	it(@"should have last input received set to not found be default", ^{
+		
+        [[theValue(sut.lastInputReceived) should] equal:theValue(NSNotFound)];
+        
+    });
+
+	it(@"should raise exception if invalid input option selected", ^{
+		
+        sut.inputOptions = @[];
+		
+		[[theBlock(^{
+			
+			[sut didSelectInputOption:0];
+		}) should] raiseWithName:@"NSInternalInconsistencyException"];
+        
+    });
+
 
 
 });
