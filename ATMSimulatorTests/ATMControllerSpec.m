@@ -92,10 +92,33 @@ describe(@"ATM Controller", ^{
 		
 		it(@"should assign input options to console", ^{
 			
-			[[console.inputOptions should] haveCountOf:4];
-			[[console.inputOptions should] containObjects:@"10,000", @"1,000", @"100", @"10", nil];
+			[[console.inputOptions should] haveCountOf:5];
+			[[console.inputOptions should] containObjects:@"10,000", @"1,000", @"100", @"10", @"Done", nil];
 			
 		});
+		
+		it(@"should have cash balance of 43210 with simulated input", ^{
+			
+			[console didSelectInputOption:0];	// 10,000
+			[console didSelectInputOption:0];	// 10,000
+			[console didSelectInputOption:0];	// 10,000
+			[console didSelectInputOption:0];	// 10,000
+
+			[console didSelectInputOption:1];	// 1,000
+			[console didSelectInputOption:1];	// 1,000
+			[console didSelectInputOption:1];	// 1,000
+
+			[console didSelectInputOption:2];	// 100
+			[console didSelectInputOption:2];	// 100
+
+			[console didSelectInputOption:3];	// 10
+
+			[console didSelectInputOption:4];	// Done
+			
+			[[theValue(sut.cashBalance) should] equal: theValue(43210)];
+			
+		});
+
 
 		
 		xit(@"should receive initial cash balance", ^{
