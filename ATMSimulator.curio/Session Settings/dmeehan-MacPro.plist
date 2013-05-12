@@ -12,7 +12,7 @@
 	<key>0CC7F4C3-45A0-4B67-850B-7A25F4D1F30D</key>
 	<dict>
 		<key>Visible Rect</key>
-		<string>{{0, 40}, {1541, 973}}</string>
+		<string>{{0, 40}, {1485, 973}}</string>
 		<key>Zoom Factor</key>
 		<real>1</real>
 	</dict>
@@ -37,6 +37,13 @@
 		<key>Zoom Factor</key>
 		<real>1</real>
 	</dict>
+	<key>9C127975-B72D-468B-8329-D7739D3F4DF1</key>
+	<dict>
+		<key>Visible Rect</key>
+		<string>{{0, 80}, {1485, 973}}</string>
+		<key>Zoom Factor</key>
+		<real>1</real>
+	</dict>
 	<key>DAECA2B7-7A99-47F3-9935-83477437C5BC</key>
 	<dict>
 		<key>Visible Rect</key>
@@ -47,7 +54,7 @@
 	<key>E08380AB-D2CE-4354-8A43-91CE338061EF</key>
 	<dict>
 		<key>Visible Rect</key>
-		<string>{{0, 60}, {1541, 973}}</string>
+		<string>{{0, 60}, {1485, 973}}</string>
 		<key>Zoom Factor</key>
 		<real>1</real>
 	</dict>
