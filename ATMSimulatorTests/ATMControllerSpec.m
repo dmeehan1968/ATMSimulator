@@ -205,6 +205,22 @@ describe(@"ATM Controller", ^{
 					
 				});
 				
+				it(@"should not update cash balance until done is pressed", ^{
+					
+					[console didSelectInputOption:0];
+					[console didSelectInputOption:1];
+					[console didSelectInputOption:2];
+					[console didSelectInputOption:3];
+					
+					[[theValue(sut.cashBalance) should] equal:theValue(0)];
+					
+					[console didSelectInputOption:4];
+					
+					[[theValue(sut.cashBalance) should] equal:theValue(11110)];
+					
+				});
+
+				
 				
 				xit(@"should have cash balance of 43210 with simulated input", ^{
 					
