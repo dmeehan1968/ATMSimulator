@@ -144,6 +144,8 @@ NSString * const ATMControllerMessageInvalidInput = @"Invalid Input";
 -(void)endCashBalanceInput {
 
 	[self.console removeObserver:self keyPath:@"lastInputReceived"];
+	
+	self.console.inputOptions = nil;
 
 }
 
