@@ -241,18 +241,29 @@ describe(@"ATM Controller", ^{
 					[[theValue(sut.cashBalance) should] equal: theValue(43210)];
 					
 				});
-
-				
+								
 			});
 			
+			context(@"Card Insertion", ^{
+				
+				beforeEach(^{
+					
+					// Add initial cash balance
+					
+					[console didSelectInputOption:0];	// 10,000
+					[console didSelectInputOption:4];	// Done
+					
+				});
+				
+				it(@"should display 'insert card' message", ^{
+					
+					[[console.message should] equal:ATMControllerMessageInsertCard];
+					
+				});
 
+			});
 			
 		});
-		
-
-	
-	
-	
 	
 	});
 
