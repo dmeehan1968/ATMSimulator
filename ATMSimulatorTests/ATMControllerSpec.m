@@ -161,11 +161,11 @@ describe(@"ATM Controller", ^{
 					
 				});
 
-				it(@"should allow input 0 to be selected and message should include 10,000", ^{
+				it(@"should allow input 0 to be selected and message should include 10000", ^{
 					
 					[console didSelectInputOption:0];	// 10,000
 					
-					[[console.message should] contain:@"10,000"];
+					[[console.message should] containString:@"10000"];
 					
 				});
 

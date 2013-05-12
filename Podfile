@@ -15,5 +15,5 @@ target :ATMSimulator, :exclusive => true do
 end
 
 target :ATMSimulatorTests, :exclusive => true do
-   pod 'Kiwi'
+	pod 'Kiwi', :head
 end

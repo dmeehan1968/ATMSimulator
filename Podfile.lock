@@ -1,10 +1,10 @@
 PODS:
-  - Kiwi (2.0.6)
+  - Kiwi (HEAD based on 2.0.6)
   - MAKVONotificationCenter (0.0.2)
   - MTControl (0.0.4)
 
 DEPENDENCIES:
-  - Kiwi
+  - Kiwi (HEAD)
   - MAKVONotificationCenter
   - MTControl
 
