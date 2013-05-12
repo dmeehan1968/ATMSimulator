@@ -260,6 +260,13 @@ describe(@"ATM Controller", ^{
 					[[console.message should] equal:ATMControllerMessageInsertCard];
 					
 				});
+				
+				it(@"should not have any input options while waiting for card", ^{
+					
+					[[console.inputOptions should] haveCountOf:0];
+					
+				});
+
 
 			});
 			
