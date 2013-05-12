@@ -169,6 +169,41 @@ describe(@"ATM Controller", ^{
 					
 				});
 
+				it(@"should allow input 0 twice and message should include 20000", ^{
+					
+					[console didSelectInputOption:0];
+					[console didSelectInputOption:0];
+					
+					[[console.message should] containString:@"20000"];
+					
+				});
+				
+				it(@"should allow input 1 twice and message should include 2000", ^{
+					
+					[console didSelectInputOption:1];
+					[console didSelectInputOption:1];
+					
+					[[console.message should] containString:@"2000"];
+					
+				});
+				
+				it(@"should allow input 2 twice and message should include 200", ^{
+					
+					[console didSelectInputOption:2];
+					[console didSelectInputOption:2];
+					
+					[[console.message should] containString:@"200"];
+					
+				});
+				
+				it(@"should allow input 3 twice and message should include 20", ^{
+					
+					[console didSelectInputOption:3];
+					[console didSelectInputOption:3];
+					
+					[[console.message should] containString:@"20"];
+					
+				});
 				
 				
 				xit(@"should have cash balance of 43210 with simulated input", ^{
