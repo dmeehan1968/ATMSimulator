@@ -87,7 +87,8 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 		[self didReceiveCashBalanceInput];
 		
 	}];
-
+	
+	self.cashBalance = 0;
 }
 
 -(void)didReceiveCashBalanceInput {
