@@ -12,6 +12,8 @@
 
 extern NSString * const ATMControllerMessageNotAvailable;
 extern NSString * const ATMControllerMessageEnterCashBalance;
+extern NSString * const ATMControllerMessageInsertCard;
+extern NSString * const ATMControllerMessageInvalidInput;
 
 @interface ATMController : NSObject
 

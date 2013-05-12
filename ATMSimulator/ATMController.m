@@ -11,6 +11,8 @@
 
 NSString * const ATMControllerMessageNotAvailable = @"Not Available";
 NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial Cash Balance";
+NSString * const ATMControllerMessageInsertCard = @"Please Insert Card";
+NSString * const ATMControllerMessageInvalidInput = @"Invalid Input";
 
 @interface ATMController()
 
@@ -124,7 +126,17 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 		
 		self.cashBalance = [[self.cashBalanceInputs componentsJoinedByString:@""] integerValue] * 10;
 		
-		[self endCashBalanceInput];
+		if (self.cashBalance > 0) {
+
+			[self endCashBalanceInput];
+			
+			[self prepareForInsertCard];
+			
+		} else {
+			
+			self.console.message = ATMControllerMessageInvalidInput;
+			
+		}
 	}
 	
 }
@@ -133,6 +145,12 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 
 	[self.console removeObserver:self keyPath:@"lastInputReceived"];
 
+}
+
+-(void)prepareForInsertCard {
+	
+	self.console.message = ATMControllerMessageInsertCard;
+	
 }
 
 @end

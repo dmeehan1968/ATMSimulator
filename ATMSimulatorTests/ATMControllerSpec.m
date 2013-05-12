@@ -157,7 +157,7 @@ describe(@"ATM Controller", ^{
 					
 					[console didSelectInputOption:4];	// Done
 					
-					[[console.message should] equal:ATMControllerMessageEnterCashBalance];
+					[[console.message should] equal:ATMControllerMessageInvalidInput];
 					
 				});
 
