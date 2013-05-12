@@ -12,6 +12,13 @@
 NSString * const ATMControllerMessageNotAvailable = @"Not Available";
 NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial Cash Balance";
 
+@interface ATMController()
+
+@property (strong, nonatomic) NSArray *cashBalanceInputs;
+
+@end
+
+
 @implementation ATMController
 
 -(void)resetATM {
@@ -46,11 +53,12 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 	[_operatorSwitch addObserver:self keyPath:@"state" options:0 block:^(MAKVONotification *notification) {
 		
 		if (self.operatorSwitch.state) {
-			
-			self.console.message = ATMControllerMessageEnterCashBalance;
-			self.console.inputOptions = @[ @"10,000", @"1,000", @"100", @"10", @"Done" ];
+
+			[self prepareForCashBalanceInput];
 			
 		} else {
+			
+			[self.console removeObserver:self keyPath:@"lastInputReceived"];
 			
 			// Need to guard against recursion.
 			static BOOL inReset = NO;
@@ -65,6 +73,52 @@ NSString * const ATMControllerMessageEnterCashBalance = @"Please Enter Initial C
 	}];
 	
 	[self resetATM];
+}
+
+-(void)prepareForCashBalanceInput {
+	
+	self.cashBalanceInputs = @[ @0, @0, @0, @0 ];
+	
+	self.console.message = ATMControllerMessageEnterCashBalance;
+	self.console.inputOptions = @[ @"10,000", @"1,000", @"100", @"10", @"Done" ];
+	
+	[self.console addObserver:self keyPath:@"lastInputReceived" options:0 block:^(MAKVONotification *notification) {
+		
+		[self didReceiveCashBalanceInput];
+		
+	}];
+
+}
+
+-(void)didReceiveCashBalanceInput {
+
+	if (self.console.lastInputReceived >= self.cashBalanceInputs.count) {
+		
+		// Assume Done is pressed, change state.
+		return;
+	}
+	
+	NSNumber *input = self.cashBalanceInputs[self.console.lastInputReceived];
+	
+	input = [NSNumber numberWithInteger: ([input integerValue] + 1) % 10];
+	
+	NSMutableArray *newCashBalanceInputs = [NSMutableArray arrayWithCapacity:self.cashBalanceInputs.count];
+	
+	[self.cashBalanceInputs enumerateObjectsUsingBlock:^(NSNumber *number, NSUInteger idx, BOOL *stop) {
+		
+		if (idx == self.console.lastInputReceived) {
+			[newCashBalanceInputs addObject:input];
+		} else {
+			[newCashBalanceInputs addObject:number];
+		}
+	}];
+	
+	self.cashBalanceInputs = [newCashBalanceInputs copy];
+	
+	NSString *inputsAsString = [self.cashBalanceInputs componentsJoinedByString:@""];
+	
+	self.console.message = [NSString stringWithFormat:@"%@\n%@0", ATMControllerMessageEnterCashBalance, inputsAsString];
+	
 }
 
 @end
